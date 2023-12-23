@@ -2,7 +2,7 @@ import './App.css'
 
 function App() {
   // INLINE CSS (NOT RECOMMMENDED)
-  return <main>Hello</main>
+  return <main>Hello HTML</main>
 }
 
 export default App
