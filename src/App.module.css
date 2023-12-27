@@ -1,4 +1,5 @@
-main {
+/* selectior for classNamme -> . */
+.box {
   padding: 20px;
   border: 2px solid red;
 }

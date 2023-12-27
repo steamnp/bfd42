@@ -1,8 +1,7 @@
-import './App.css'
+import styles from './App.module.css'
 
 function App() {
-  // INLINE CSS (NOT RECOMMMENDED)
-  return <main>Hello HTML</main>
+  return <main className={styles.box}>Hello</main>
 }
 
 export default App
