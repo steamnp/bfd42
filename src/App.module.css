@@ -1,0 +1,15 @@
+/* selector for className -> . */
+.box {
+  padding: 20px;
+  border: 2px solid red;
+}
+
+/* -> CSS Selector */
+/* padding -> CSS Property */
+/*10px -> Property Value */
+/* padding: 10px; -> CSS Declaration */
+
+/* div {
+    padding: 10px;
+    border: 2px solid red;
+} -> CSS Rule */
