@@ -1,5 +1,7 @@
+import styles from "./app.module.css";
 function App() {
-  return <div>hello</div>;
-}
+  const myName = "sushant";
 
+  return <main className={styles.box}>{myName}</main>;
+}
 export default App;
