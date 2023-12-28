@@ -13,3 +13,10 @@ export default App;
 // function getAge(){
 // return 20
 // }
+
+// let, const -> 2015
+
+// ED6 -> 2015 -> Modern JS
+// ES6(JS) modules
+// import
+// export
