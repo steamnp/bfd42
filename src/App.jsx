@@ -1,22 +1,12 @@
 import styles from './App.module.css'
+// named import
+// import { country } from './utils/test'
 
-// Component
-// if name is following PacalCase convention
-// & if it is returning JSX
+// default import
+import country from './utils/test'
+
 function App() {
-  return <main className={styles.box}>Hello</main>
+  return <main className={styles.box}>{country}</main>
 }
 
 export default App
-
-// function (generic JS function)
-// function getAge() {
-//   return 20
-// }
-
-// let, const -> 2015
-
-// ED6 -> 2015 -> Modern JS
-// ES6 modules
-// import
-// export
