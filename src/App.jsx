@@ -1,4 +1,4 @@
-import styles from ".App.module.css";
+import { country } from "./test";
 
 function App() {
   return <main className={StyleSheet.box}>Hello</main>;
