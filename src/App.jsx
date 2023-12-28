@@ -1,12 +1,19 @@
 import { country } from "./test";
 
 function App() {
-  // const nyName = "Rajip";
-  let myName = "Gorakh";
+  // this is the location to write js code
+  // 1. create variable and assign value to it
+  // const myName = "Rajip";
+  // let myName = "Gorakh";
+  // myName = "Jayanti";
 
-  myName = "Jayanti";
+  // const myCountry = "Nepal"
 
-  return <main className={StyleSheet.box}>{myNameyName}</main>;
+  let age = 30;
+  age = 31;
+  age = 32;
+
+  return <main className={StyleSheet.box}>{age}</main>;
 }
 
 export default App;
