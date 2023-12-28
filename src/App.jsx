@@ -1,7 +1,9 @@
 import { country } from "./test";
 
 function App() {
-  return <main className={StyleSheet.box}>Hello</main>;
+  const nyName = "Rajip";
+
+  return <main className={StyleSheet.box}>{nyName}</main>;
 }
 
 export default App;
