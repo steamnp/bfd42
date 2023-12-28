@@ -16,6 +16,6 @@ Get design images from design folder
 
 ## How to submit?
 
-1. In `bfd12` repository, create a new branch with name`blog-preview-layout-card-<insert your first name here>`
+1. In `bfd42` repository, create a new branch with name`blog-preview-layout-card-<insert your first name here>`
 2. Complete your UI with appropriate commits (you should create multiple commits for your changes)
 3. Push your code and attach the link of your branch while submitting from bootcamp portal
