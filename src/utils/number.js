@@ -1,5 +1,4 @@
 function sum(x, y) {
   return x + y;
 }
-
-export default sum;
+export sum(1,1)
