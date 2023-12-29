@@ -1,5 +1,6 @@
 import Sum from "../../../utils/number";
 function Home() {
-  return <div>{Sum}</div>;
+  const total = Sum(10, 10);
+  return <div>{total}</div>;
 }
 export default Home;
