@@ -1,8 +1,8 @@
 import sumFunction from "../../utils/number";
 
 function Home() {
-  sumFunction();
-  return <div>Home</div>;
+  const totalSum = sumFunction();
+  return <div>totalSum</div>;
 }
 
 export default Home;
