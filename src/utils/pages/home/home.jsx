@@ -1,4 +1,7 @@
+import getSum from "../../number";
+
 function Home() {
-  return <div>Home</div>;
+  const totalSum = getSum(2, 2);
+  return <div>{totalSum}</div>;
 }
 export default Home;
