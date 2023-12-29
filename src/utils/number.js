@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.jsx";
 
 function sumFunction(firstNumber) {
   return 20 + firstNumber;
