@@ -1,10 +1,4 @@
-import "./App.jsx";
-
-function sumFunction(firstNumber) {
-  return 20 + firstNumber;
-
-  const addNum = sumFunction(21);
-
-  return <main className={StyleSheet.box}>addNum</main>;
+function sumFunction(firstNumber, secondNumber) {
+  return firstNumber + secondNumber;
 }
 export default sumFunction;
