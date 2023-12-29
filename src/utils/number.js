@@ -1,5 +1,5 @@
-function sum(x, y) {
-  return x + y;
+function sum(firstNum, secondNum) {
+  return firstNum + secondNum;
 }
 
 export default sum;
