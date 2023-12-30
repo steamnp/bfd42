@@ -26,6 +26,21 @@ function Home() {
   // typeof isProductAvailable -> boolean
   const isProductAvailable = false
 
+  const numberOne = 10
+  const numberTwo = 20
+
+  // Truthy Values
+
+  // Falsy values
+  // false, undefined, 0, '', null, NaN
+
+  // conditional statement
+  if (numberOne > numberTwo) {
+    console.log('I am truthy value!')
+  } else {
+    console.log('I am a falsy value!')
+  }
+
   return <div>{typeof myFavNumbers}</div>
 }
 
