@@ -1,7 +1,11 @@
-import getSum from "../../number";
-
 function Home() {
-  const totalSum = getSum(2, 2);
-  return <div>{totalSum}</div>;
+  const person = {
+    randomValue: {
+      newValue: "Hello React",
+    },
+    anotherValue: 20,
+  };
+  return <div>{person.anotherValue}</div>;
 }
+
 export default Home;
