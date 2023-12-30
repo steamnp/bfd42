@@ -1,11 +1,12 @@
 import Header from './header'
 
 function Home() {
+  const subtitleValue = 'I am subtitle!'
   return (
     <div>
       {/* headerText -> prop */}
       {/* subTitle -> prop */}
-      <Header subTitle="I am subtitle!">
+      <Header subTitle={subtitleValue}>
         <h1>Hello React</h1>
         <h2>React Component</h2>
       </Header>
