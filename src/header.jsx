@@ -1,11 +1,8 @@
-function Header({ headerText, subText, children }) {
-  return (
-    <div className="header">
-      <h1>{headerText}</h1>
-      <h2>{subText}</h2>
-      {children}
-    </div>
-  );
+function Header() {
+  const handleClick = (e) => (e.target.textContent = "OUCH!");
+  // const handleClick2 = (name) => console.log(`${name} stop clicking me`);
+
+  return <button onDoubleClick={handleClick}>Click Me</button>;
 }
 
 export default Header;
