@@ -1,4 +1,6 @@
-import Home from "./home"
+import Footer from "./components/Footer"
+import Navbar from "./components/navbar"
+import Home from "./components/home"
 
 
 function App() {
@@ -6,7 +8,11 @@ function App() {
 
   return (
     <>
+    <div>
+    <Navbar/>
     <Home/>
+    <Footer/>
+    </div>
       </>
   )
 }
