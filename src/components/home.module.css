@@ -1,12 +1,12 @@
 .home {
-    width: 100vw;
-    height: 300px;
+    width: auto;
+    height:100svh;
+ 
     margin-top: 100px;
     position: relative;
     display: flex;
-    font-size: larger;
-    align-items: start;
-    padding: 30px;
+    align-items: center;
     justify-content: center;
+    
     
 }
