@@ -1,16 +1,13 @@
-import Header from "./components/header";
-import Home from "./pages/home";
-import Footer from "./components/footer";
-import Service from "./pages/serivce";
-
 function App() {
-  return (
-    <div>
-      <Header />
-      <Home />
-      <Footer />
-      <Service />
-    </div>
-  );
+  const arr = [1, 2, 3, 4];
+  const randomArr = ["Lama", "Shyam", 100, 200, 600, 800];
+
+  console.log(arr);
+  console.log(randomArr);
+  console.log(arr.length);
+  console.log(randomArr.length);
+  //   console.log(arr.map());
+
+  return <div>Hellooooo</div>;
 }
 export default App;
