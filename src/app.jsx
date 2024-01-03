@@ -1,14 +1,18 @@
 function App() {
-  const arr = [1, 2, 3, 4, 5, 6]
+  const button = <button>Submit</button>
 
-  const randomArr = []
+  // React Sunthetic Events
+  // onClick
+  // onChange
+  // onSubmit
 
-  console.log(arr)
-  console.dir(document)
+  console.log(button)
 
-  console.log(null)
-
-  return <div>App</div>
+  return (
+    <div>
+      <button>Submit</button>
+    </div>
+  )
 }
 
 export default App
