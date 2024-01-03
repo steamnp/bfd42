@@ -1,17 +1,14 @@
-import Footer from './components/footer'
-import Header from './components/header'
-import Home from './pages/home'
-import Service from './pages/service'
-
 function App() {
-  return (
-    <div>
-      <Header />
-      <Home />
-      <Service />
-      <Footer />
-    </div>
-  )
+  const arr = [1, 2, 3, 4, 5, 6]
+
+  const randomArr = []
+
+  console.log(arr)
+  console.dir(document)
+
+  console.log(null)
+
+  return <div>App</div>
 }
 
 export default App
