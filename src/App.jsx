@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <Card
         title="card title"
-        imageUrl="https://github.com/steamnp/bfd42/blob/assignment-1/design/active-states.jpg"
+        imageUrl="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/kaiwxzdh90xhbdwsstvl.jpg"
         body="The quick brown fox jumps over the lazy dog"
       />
     </div>
