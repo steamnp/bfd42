@@ -1,5 +1,5 @@
 function Home({ randomProp }) {
-  return <div></div>;
+  return <div>{randomProp}</div>;
 }
 
 export default Home;

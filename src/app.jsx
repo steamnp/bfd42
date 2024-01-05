@@ -4,7 +4,14 @@ function App() {
   return (
     <div>
       <div>Home</div>
-      <button> Click Me</button>
+      <button
+        onClick={function () {
+          console.log("Heyyyy");
+        }}
+      >
+        {" "}
+        Click Me
+      </button>
       <Home className="container" randomProp="Tsering" />
     </div>
   );
