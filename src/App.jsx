@@ -1,8 +1,8 @@
-function App() {
-  function handleClick() {
-    console.log("You clicked");
-  }
-  return <div onClick={handleClick}>Hello</div>;
-}
+// import React from "react";
+// import signIn from "./sign-in";
 
+function App() {
+  return;
+  <div>App</div>;
+}
 export default App;
