@@ -1,0 +1,13 @@
+.container {
+  height: 300px;
+  width: 250px;
+  border: 2px solid black;
+  padding: 5px;
+  /* background-color: antiquewhite; */
+}
+
+.btn {
+  margin: 5px;
+  background-color: blue;
+  border-radius: 5px;
+}

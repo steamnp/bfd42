@@ -1,19 +1,12 @@
-import Home from "./Home";
+import SignIn from "./sign-in.jsx";
 
 function App() {
   return (
     <div>
-      <div>Home</div>
-      <button
-        onClick={function () {
-          console.log("Heyyyy");
-        }}
-      >
-        {" "}
-        Click Me
-      </button>
-      <Home className="container" randomProp="Tsering" />
+      <div>hello</div>
+      <SignIn />
     </div>
   );
 }
+
 export default App;
