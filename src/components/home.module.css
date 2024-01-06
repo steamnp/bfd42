@@ -3,21 +3,21 @@
 .form {
   width: 358px;
   height: 421px;
-  margin-top: 245px;
-  margin-left: 367px;
+  margin-top: 262px;
+  margin-left: 357px;
   border-radius: 20px;
   background-color: #c8c8c8;
-  position: absolute;
+  position: fixed;
 }
 
 .inputemail {
   width: 261px;
   height: 37px;
-  margin-top: 234px;
+  margin-top: 75px;
   margin-left: 56px;
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: relative;
 
 }
 
@@ -27,18 +27,38 @@
 .inputpassword {
     width: 261px;
     height: 37px;
-    margin-top: 305px;
+    margin-top: 25px;
     margin-left: 56px;
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: relative;
     padding: '10px';
   
 
 }
 .container{
   display: flex;
+  flex-direction: column;
     
 
 
 }
+
+.layout{
+width: 687px;
+height: 798px;
+background-color: #D9D9D9;
+}
+
+.greenbtn{
+    width: 93px;
+    height: 37px;
+    position: relative;
+    background-color: #39603A;
+    color: #D9D9D9;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 56px;
+   
+}
+
