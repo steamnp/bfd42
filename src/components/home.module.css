@@ -1,12 +1,44 @@
-.home {
-    width: auto;
-    height:100svh;
- 
-    margin-top: 100px;
-    position: relative;
+
+
+.form {
+  width: 358px;
+  height: 421px;
+  margin-top: 245px;
+  margin-left: 367px;
+  border-radius: 20px;
+  background-color: #c8c8c8;
+  position: absolute;
+}
+
+.inputemail {
+  width: 261px;
+  height: 37px;
+  margin-top: 234px;
+  margin-left: 56px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+
+}
+
+
+
+
+.inputpassword {
+    width: 261px;
+    height: 37px;
+    margin-top: 305px;
+    margin-left: 56px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    padding: '10px';
+  
+
+}
+.container{
+  display: flex;
     
-    
+
+
 }
