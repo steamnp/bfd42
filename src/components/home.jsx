@@ -1,6 +1,6 @@
 import React from "react";
 import sytles from "./home.module.css";
-import { AuthLogo } from "../assets/authentication";
+
 
 
 export default function Home() {
@@ -9,9 +9,9 @@ export default function Home() {
     <div classname={sytles.container}>
     <form className={sytles.form}>
       <div >
-        <div className={sytles.img}>
-   <AuthLogo/>
-   </div>
+        <img className={sytles.img} src='src/assets/authentication.png'/>
+
+   
         <div  className={sytles.inputemail}>
           <label htmlFor="email">Email:</label>
           <input
@@ -29,7 +29,7 @@ export default function Home() {
             name="password"
           />
         </div>
-        <div className = {sytles.greenbtn}type='button'> Sign In</div>
+        <div className = {sytles.greenbtn} type='button'> Sign In</div>
       </div>
       
     </form>
