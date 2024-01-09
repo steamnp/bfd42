@@ -1,0 +1,54 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+.headerLogo img {
+  height: 85px;
+  width: 86px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+.card {
+  background-color: rgba(200, 200, 200, 1);
+  max-width: 421px;
+  height: 360px;
+  border-radius: 15px;
+  padding: 25px 50px;
+}
+
+.userEmail {
+  margin: 15px 0px;
+}
+
+.userPassword {
+  margin-top: 10px;
+}
+
+.emailInput,
+.passwordInput {
+  height: 37px;
+  width: 261px;
+  border: none;
+  margin-top: 5px;
+  border-radius: 2px;
+}
+
+.userSignIn {
+  margin-top: 15px;
+}
+
+.signinButton {
+  height: 37px;
+  width: 93px;
+  background-color: #39603a;
+  color: white;
+  border: none;
+}
