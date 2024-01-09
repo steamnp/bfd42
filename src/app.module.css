@@ -20,17 +20,26 @@
   background-color: rgb(173, 210, 105);
   border-radius: 5px;
 }
+
 .image {
   height: 50px;
   width: 50px;
   padding-bottom: 20px;
+  display: block;
+  margin: auto;
 }
+
 .heading {
   text-align: center;
+}
+
+form {
+  padding: 0 20% 0;
 }
 .email {
   margin-bottom: 5px;
 }
+
 .password {
   margin-bottom: 5px;
 }

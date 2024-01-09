@@ -5,6 +5,13 @@ function SignIn() {
     alert("Your form is submitted");
   }
 
+  function compareLength() {
+    let username = document.querySelector("input").length;
+    if (username < 1) {
+      alert("The field is empty");
+    }
+  }
+
   return (
     <div class={styles.main}>
       <div className={styles.container}>
