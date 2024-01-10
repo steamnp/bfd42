@@ -1,76 +1,64 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-
-.form {
+.card {
+  background-color: #c8c8c8;
   width: 358px;
   height: 421px;
+  text-align: center;
   border-radius: 20px;
-  background-color: #c8c8c8;
-  margin: auto;
-  margin-top: 200px;
-  
-
 }
 
-.inputemail {
-  width: 261px;
-  height: 37px;
-  margin-top: 25px;
-  margin-left: 56px;
-  display: flex;
-  flex-direction: column;
-
-}
-
-
-
-
-.inputpassword {
-    width: 261px;
-    height: 37px;
-    margin-top: 25px;
-    margin-left: 56px;
-    display: flex;
-    flex-direction: column;
-    padding: '10px';
-  
-
-}
-.container{
-  display: flex;
-  flex-direction: column;
-    
-
-
-}
-
-.layout{
-width: 687px;
-height: 798px;
-background-color: #D9D9D9;
-}
-
-.greenbtn{
-    width: 93px;
-    height: 29px;
-    position: relative;
-    background-color: #39603A;
-    color: #D9D9D9;
-    text-align:center;
-    margin-top: 15px;
-    margin-left: 56px;
-    padding-top: 8px;
-    
-   
-}
-
-
-.img{
+.img {
+  display: inline-block;
   width: 85px;
   height: 86px;
-  position: relative;
-  margin-left: 140px;
-  margin-top: 30px;
-  background-color: #c8c8c8;
+  margin-top: 25px;
+  margin-bottom: 42px;
+}
 
- 
+.alignVertical {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.credential {
+  padding: 0 49px;
+  text-align: left;
+}
+
+.input {
+  border: none;
+  height: 37px;
+  background-color: #d9d9d9;
+}
+
+.btn {
+  border: none;
+  background-color: #39603a;
+  color: white;
+  width: 93px;
+  height: 37px;
+  cursor: pointer;
+}
+.btndisabled {
+  border: none;
+  background-color: #dcd9d7;
+  color: white;
+  width: 93px;
+  height: 37px;
+  cursor:not-allowed;
+  
+}
+.errorBorder {
+  border: 2px solid red;
+}
+
+.error {
+  color: red;
 }
