@@ -1,0 +1,50 @@
+.container {
+  background-color: aqua;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: rgb(173, 173, 173);
+  border-radius: 15px;
+  width: 358px;
+  height: 400px;
+  text-align: center;
+}
+
+.img {
+  background-color: rgb(152, 97, 29);
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.alignVertical {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.credential {
+  padding: 0 50px;
+  text-align: left;
+}
+
+.input {
+  border: none;
+  height: 37px;
+  background-color: #d9d9d9;
+}
+
+.btn {
+  border: none;
+  background-color: green;
+  color: white;
+  height: 37px;
+  width: 93px;
+  cursor: pointer;
+}

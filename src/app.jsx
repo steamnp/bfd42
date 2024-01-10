@@ -1,25 +1,23 @@
-import { useState } from "react";
+import styles from "./app.module.css";
 
 function App() {
-  const [email, setEmail] = useState("");
-
-  // Normal js variable
-  // let email;
-
-  // state variable
-  // hook
-
   return (
-    <article>
-      <label htmlFor="">Email</label>
-      <input
-        type="text"
-        onChange={(e) => {
-          setEmail(e.target.value);
-        }}
-      />
-      <h3>You typed: {email}</h3>
-    </article>
+    <div className={styles.container}>
+      <article className={styles.card}>
+        <img className={styles.img} src="./images/profile_pic.jpg" alt="" />
+        <div className={styles.credential}>
+          <div className={styles.alignVertical}>
+            <label htmlFor="email">Email:</label>
+            <input className={styles.input} type="email" id="email" />
+          </div>
+          <div className={styles.alignVertical}>
+            <label htmlFor="password">Password:</label>
+            <input className={styles.input} type="password" id="password" />
+          </div>
+          <button className={styles.btn}>Sign In</button>
+        </div>
+      </article>
+    </div>
   );
 }
 
