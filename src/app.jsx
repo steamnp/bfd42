@@ -1,42 +1,23 @@
-import { useState } from 'react'
-
-// function add(a,b){
-// }
-
-// add(10, 20)
-
-// const numbers = [10, 20, 30]
-
-// const [numberOne] = numbers
+import styles from './app.module.css'
 
 function App() {
-  console.log('Running')
-  const [email, setEmail] = useState('')
-  // email -> state variable
-  // setEmail -> state updating function
-
-  // Normal js variable
-  // let email
-
-  // state variable
-  // hook
-
-  // When state changes in React your component will render again
-
   return (
-    <article>
-      <label htmlFor="">Email</label>
-      <input
-        onChange={(e) => {
-          //get typed input
-          // email = e.target.value
-          setEmail(e.target.value)
-          console.log(email)
-        }}
-        type="text"
-      />
-      <h3>You typed: {email}</h3>
-    </article>
+    <div className={styles.container}>
+      <article className={styles.card}>
+        <img src="/icons/authentication.png" alt="" className={styles.img} />
+        <div className={styles.credential}>
+          <div className={styles.alignVertical}>
+            <label htmlFor="email">Email</label>
+            <input className={styles.input} id="email" type="email" />
+          </div>
+          <div className={styles.alignVertical}>
+            <label htmlFor="password">Password</label>
+            <input className={styles.input} id="password" type="password" />
+          </div>
+          <button className={styles.btn}>Sign In</button>
+        </div>
+      </article>
+    </div>
   )
 }
 
