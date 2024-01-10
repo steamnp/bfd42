@@ -44,4 +44,13 @@
   color: white;
   width: 93px;
   height: 37px;
+  cursor: pointer;
+}
+
+.errorBorder {
+  border: 2px solid red;
+}
+
+.error {
+  color: red;
 }
