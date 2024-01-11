@@ -48,3 +48,11 @@
   width: 93px;
   cursor: pointer;
 }
+
+.errorBorder {
+  border: solid red;
+}
+
+.error {
+  color: red;
+}
