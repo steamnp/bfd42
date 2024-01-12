@@ -9,6 +9,7 @@ function App() {
   // type annotation (: string | number)
   let age: string | number
 
+  // Test rebase
   age = 100
 
   age = '90'
