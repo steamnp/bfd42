@@ -3,37 +3,11 @@ import styles from './app.module.css'
 
 function App() {
   const [, setEmail] = useState('')
-  // type inference
+
   const [password, setPassword] = useState('')
-
-  // type annotation (: string | number)
-  let age: string | number
-
-  // Test rebase
-  age = 100
-
-  age = '90'
-  age = '80'
-
-  // age = [1,2,3]
-
-  // Initial run -> render
-  // Again run -> re-render
-
-  // statement
-  // if(email) {
-  //   ''
-  // } else {
-  //   styles.errorBorder
-  // }
-
-  // expression
-  // ternary operator
-  // email ? styles.errorBorder : ''
 
   return (
     <div className={styles.container}>
-      <div>{age}</div>
       <article className={styles.card}>
         <img src="/icons/authentication.png" alt="" className={styles.img} />
         <div className={styles.credential}>
