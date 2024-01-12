@@ -1,26 +1,27 @@
 import React from "react";
 import topCard from "./assets/topCard.svg";
-import './Layout.css'
+import styles from './layout.module.css'
 import './global.css'
+import avatar from './assets/avatar.jpg'
 
 export default function Layout() {
   return (
-    <div className="layout">
-      <div className="card">
-        <div className="top">
-          <img className="img" src={topCard} alt="" />
-          <button className="btn"> Learning </button>
-          <p className='date'>Published 21 Dec 2023 </p>
+    <div className={styles.layout}>
+      <div className={styles.card}>
+        <div className={styles.top}>
+          <img className={styles.img} src={topCard} alt="" />
+          <button className={styles.btn}> Learning </button>
+          <p className={styles.date}>Published 21 Dec 2023 </p>
         </div>
-        <div className="bottom">
-            <h2 className="heading">HTML & CSS foundations</h2>
-            <p className = 'para'> These languages are the backbone of every 
+        <div className={styles.bottom}>
+            <h2 className={styles.heading}>HTML & CSS foundations</h2>
+            <p className = {styles.para}> These languages are the backbone of every 
             <br/>website, defining structure, content, and 
             <br/>presentation.
             </p>
-            <footer className = 'cardfooter'>
-                <img className='avatar' src='./assets/avatar.jpg' alt='avatar'/>
-                <p className ="personname">Greg Hooper</p>
+            <footer className = {styles.cardfooter}>
+                <img className={styles.avatar} src={avatar} alt='avatar'/>
+                <p className ={styles.personname}>Greg Hooper</p>
             </footer>
 
         </div>
