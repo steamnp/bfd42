@@ -1,35 +1,61 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import styles from "./app.module.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  // Initial run -> render
+  // Again run -> re-render
+
+  // statement
+  // if(email) {
+  //   ''
+  // } else {
+  //   styles.errorBorder
+  // }
+
+  // expression
+  // ternary operator
+  // email ? styles.errorBorder : ''
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className={styles.container}>
+      <article className={styles.card}>
+        <img src="/icon/authentication(1).png" alt="" className={styles.img} />
+        <div className={styles.credential}>
+          <div className={styles.alignVertical}>
+            <label htmlFor="email">Email</label>
+            <input
+              onChange={(e) => setEmail(e.target.value)}
+              className={styles.input}
+              id="email"
+              type="email"
+            />
+          </div>
+          <div className={styles.alignVertical}>
+            <label htmlFor="password">Password</label>
+            <input
+              onChange={(e) => setPassword(e.target.value)}
+              className={`${styles.input} ${
+                password.length >= 8 ? "" : styles.errorBorder
+              }`}
+              id="password"
+              type="password"
+            />
+            {password.length >= 8 ? (
+              ""
+            ) : (
+              <small className={styles.error}>
+                Your password is less than 8 characters
+              </small>
+            )}
+          </div>
+          <button className={styles.btn}>Sign In</button>
+        </div>
+      </article>
+    </div>
+  );
 }
 
-export default App
+export default App;
