@@ -1,5 +1,7 @@
+import { StyledHeader } from '../styles/header'
+
 function Header() {
-  return <div>Header</div>
+  return <StyledHeader>Header</StyledHeader>
 }
 
 export default Header
