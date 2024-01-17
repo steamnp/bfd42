@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./app.module.css";
+import "../public/icon";
 
 function App() {
   const [, setEmail] = useState("");
