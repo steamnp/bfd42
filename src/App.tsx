@@ -1,24 +1,9 @@
 import { useState } from "react";
 import styles from "./app.module.css";
-import "../public/icon";
 
 function App() {
   const [, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  // Initial run -> render
-  // Again run -> re-render
-
-  // statement
-  // if(email) {
-  //   ''
-  // } else {
-  //   styles.errorBorder
-  // }
-
-  // expression
-  // ternary operator
-  // email ? styles.errorBorder : ''
 
   return (
     <div className={styles.container}>
