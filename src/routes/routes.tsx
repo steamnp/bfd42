@@ -11,7 +11,6 @@ export const router = createBrowserRouter([
         <GlobalStyles />
         <div>Header</div>
         <Outlet />
-        <div>Footer</div>
       </>
     ),
     children: [
