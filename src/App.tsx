@@ -5,6 +5,11 @@ function App() {
   const [, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  //  Short circuiting (Logical || , Logical &&)
+
+  //  || -> looking for truthy values
+  //  && -> looking for falsy values -> false, undefined, Null. NaN, 0, ''
+
   return (
     <div className={styles.container}>
       <article className={styles.card}>
@@ -29,9 +34,7 @@ function App() {
               id="password"
               onChange={(e) => setPassword(e.target.value)}
             />
-            {password.length >= 8 ? (
-              ""
-            ) : (
+            {password.length >= 8 || (
               <small className={styles.error}>
                 Your password is less than 8 characters.
               </small>
