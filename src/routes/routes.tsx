@@ -5,6 +5,7 @@ import { GlobalStyles } from '../style/global-style'
 import Header from '../common/header/header'
 import OurCompany from '../pages/our-company'
 import Locations from '../pages/locations'
+import { menuData } from '../data/menu-data'
 
 export const router = createBrowserRouter([
   {
@@ -12,7 +13,7 @@ export const router = createBrowserRouter([
     element: (
       <>
         <GlobalStyles />
-        <Header />
+        <Header data={menuData} />
         <Outlet />
       </>
     ),
