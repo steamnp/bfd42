@@ -24,13 +24,13 @@ export const menuData = {
     city: 'Toronto, Ontario M9C 3J5',
   },
   contact: {
+    emailLink: 'mailto:contact@designo.co',
+    emailLabel: 'send us an email',
     title: 'Contact Us (Central Office)',
     phone: '+1 253-863-8967',
     phoneLink: 'tel:+1 253-863-8967',
     phoneLabel: 'call us via our official number',
     email: 'contact@designo.co',
-    emailLink: 'mailto:contact@designo.co',
-    emailLabel: 'send us an email',
   },
   social: [
     {
