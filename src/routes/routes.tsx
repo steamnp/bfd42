@@ -6,6 +6,7 @@ import Header from '../common/header/header'
 import OurCompany from '../pages/our-company'
 import Locations from '../pages/locations'
 import { menuData } from '../data/menu-data'
+import Footer from '../common/footer/footer'
 
 export const router = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ export const router = createBrowserRouter([
         <GlobalStyles />
         <Header data={menuData} />
         <Outlet />
+        <Footer/>
       </>
     ),
     children: [
