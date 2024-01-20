@@ -1,5 +1,5 @@
 function OurCompany() {
-  return <div>Our Company</div>
+  return <div>Our Company</div>;
 }
 
-export default OurCompany
+export default OurCompany;
