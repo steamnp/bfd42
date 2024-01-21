@@ -1,5 +1,12 @@
+import { Container, Card, Button } from "../styles/styles";
+
 function Home() {
-  return <div>Home page welcomes you.</div>;
+  return (
+    <Container bgColor="yellow">
+      <Button background="blue"> Home Button</Button>
+      <Card bgColor="green">card</Card>
+    </Container>
+  );
 }
 
 export default Home;

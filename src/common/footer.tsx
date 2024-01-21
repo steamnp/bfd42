@@ -1,7 +1,11 @@
-import { Styled_Footer } from "../styles/footer";
+import { Container, Button } from "../styles/styles.ts";
 
 function Footer() {
-  return <Styled_Footer>footer</Styled_Footer>;
+  return (
+    <Container color="white" bgColor="grey">
+      <Button background="yellow">Header Button</Button>
+    </Container>
+  );
 }
 
 export default Footer;

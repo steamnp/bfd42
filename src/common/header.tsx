@@ -1,6 +1,10 @@
-import { Styled_Header } from "../styles/header";
+import { Container, Button } from "../styles/styles.ts";
 function Header() {
-  return <Styled_Header>header</Styled_Header>;
+  return (
+    <Container bgColor="pink">
+      <Button background="brown">Header Button</Button>
+    </Container>
+  );
 }
 
 export default Header;
