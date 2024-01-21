@@ -11,6 +11,6 @@ export const Button = styled.button<IButton>`
     props.background}; //using props to call the value of the objects
 `;
 
-export const Card = styled.div<ICard>`
+export const Cardss = styled.div<ICard>`
   background-color: ${({ bgColor }) => bgColor};
 `;

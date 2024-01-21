@@ -1,10 +1,10 @@
-import { Container, Card, Button } from "../styles/styles";
+import { Container, Cardss, Button } from "../styles/styles";
 
 function Home() {
   return (
     <Container bgColor="yellow">
       <Button background="blue"> Home Button</Button>
-      <Card bgColor="green">card</Card>
+      <Cardss bgColor="green">card</Cardss>
     </Container>
   );
 }

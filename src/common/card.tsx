@@ -1,9 +1,7 @@
-import { Card } from "../styles/styles.ts;
+import { Cardss } from "../styles/styles.ts";
 
 function Card() {
-  return (
-  <Card></Card>
-  );
+  return <Cardss bgColor="indigo"></Cardss>;
 }
 
 export default Card;
