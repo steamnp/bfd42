@@ -6,9 +6,6 @@ import { QUERIES } from '../../helpers/media-query'
 export const FooterUpperSection = styled.div`
 
 `
-export const FooterLowerSection = styled.div`
-
-`
 export const FooterContainer = styled.footer`
   max-width: 100%;
   min-height: 0rem;
@@ -114,6 +111,12 @@ export const FooterMenuItem = styled(Link)`
 export const HorizontalLine = styled.hr`
 color: white;
 `
+export const FooterLowerSection = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+padding: 40px;
+`
 
 export const AddressDiv = styled.div`
 display: flex;
@@ -121,7 +124,17 @@ flex-direction: column;
 
 `
 
-export const AddressDivHeaderv= styled.h4`
-display: flex;
-flex-direction: column;
+export const AddressDivHeader= styled.h4`
+color: white;
+
 `
+export const AddressPara = styled.p`
+color: white;
+`
+
+export const SocialMediaLogo = styled.div`
+display: flex;
+gap: 20px;
+margin-top: 44px;
+`
+
