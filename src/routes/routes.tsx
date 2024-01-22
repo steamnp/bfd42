@@ -16,7 +16,7 @@ export const router = createBrowserRouter([
         <GlobalStyles />
         <Header data={menuData} />
         <Outlet />
-        <Footer/>
+        <Footer data={menuData}/>
       </>
     ),
     children: [

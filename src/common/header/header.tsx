@@ -6,7 +6,7 @@ import HamburgerMenu from './hamburgerMenu';
 const Header = ({ data }: { data: MenuData }) => {
   const [openNav, setOpenNav] = useState (false);
 
-  const handlenav = () => {
+  const handleNav = () => {
     setOpenNav(!openNav)
 
   }
@@ -32,7 +32,7 @@ const Header = ({ data }: { data: MenuData }) => {
             </HeaderMenuItems>
 
             
-            <HeaderMobileNav onClick = {handlenav}>
+            <HeaderMobileNav onClick = {handleNav}>
             <HamburgerMenu/>
             </HeaderMobileNav>
           </HeaderMenu>
