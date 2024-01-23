@@ -1,27 +1,29 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 function App() {
-  console.log('1')
-  // There are 2 inputs that we can pass in useEffect hook
-  // 1st input is compulsory -> callback function
-  // callback function -> input/output
-  // 2nd input is optional -> [] -> Dependency Array
+  const [users, setUsers] = useState(0)
+  console.log('Before useEffect Hook')
 
-  // [1,2,3].map(() =>  {})
+  // Get/fetch data from database
+  useEffect(() => {
+    console.log('I am running at the end!')
+  })
 
-  // useEffect hook will always be callled/invoked at the end of component rendering
+  // API
 
-  const callbackFn = () => {
-    console.log('2')
-  }
+  // Whenever state changes in Component, the Component will re-render
 
-  console.log('3')
-
-  useEffect(callbackFn)
-
-  console.log('4')
-
-  return <div>App</div>
+  return (
+    <div>
+      <button
+        onClick={() => {
+          // setUsers()
+        }}
+      >
+        Get Users
+      </button>
+    </div>
+  )
 }
 
 export default App
