@@ -3,6 +3,31 @@ import { Link } from 'react-router-dom'
 
 import { QUERIES } from '../../helpers/media-query'
 
+export const FooterDisplayBoard = styled.div`
+max-width: 80vw;
+min-height: 30vh;
+display: flex;
+margin-left: auto;
+margin-right: auto;
+background-color: var(--color-pry-100);
+z-index: 1;
+margin-top: -280px;
+position:relative;
+justify-content: space-between;
+border-radius: 3%;
+
+`
+export const FooterDisplayHeader = styled.h1`
+margin: 5%;
+color: white;
+`
+export const SectionLeftDisplyBoard = styled.section`
+margin: 25px;
+`
+
+export const SectionRightDisplyBoard = styled.section`
+
+`
 export const FooterUpperSection = styled.div`
 
 `

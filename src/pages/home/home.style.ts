@@ -4,6 +4,8 @@ import styled from "styled-components";
 export const Container = styled.div`
 max-height: 800px;
 margin-top: 50px;
+position: relative;
+margin-bottom: 400px;
 `
 export const Box = styled.div`
 height: fit-content;
