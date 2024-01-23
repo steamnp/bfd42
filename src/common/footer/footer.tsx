@@ -31,11 +31,12 @@ export default function Footer({ data }: { data: MenuData }) {
     <FooterContainer>
       <FooterDisplayBoard>
         <SectionLeftDisplyBoard>
-         <FooterDisplayHeader> Lets talk about <br/> your project</FooterDisplayHeader>
+          <FooterDisplayHeader>
+            {" "}
+            Lets talk about <br /> your project
+          </FooterDisplayHeader>
         </SectionLeftDisplyBoard>
-        <SectionRightDisplyBoard>
-        
-        </SectionRightDisplyBoard>
+        <SectionRightDisplyBoard></SectionRightDisplyBoard>
       </FooterDisplayBoard>
       <FooterUpperSection>
         <FooterWrap>

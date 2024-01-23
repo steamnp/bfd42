@@ -113,3 +113,8 @@ export const HeaderMenuItem = styled(Link)`
     }
   }
 `
+export const Hamburger = styled.div`
+:hover{
+  cursor: pointer;
+}
+`
