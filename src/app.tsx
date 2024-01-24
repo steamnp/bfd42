@@ -1,29 +1,34 @@
-import { useEffect, useState } from 'react'
-
 function App() {
-  const [users, setUsers] = useState(0)
-  console.log('Before useEffect Hook')
+  // How to get response from API url?
+  // url: https://api.github.com/users
 
-  // Get/fetch data from database
-  useEffect(() => {
-    console.log('I am running at the end!')
-  })
+  // Asynchronous Code
+  // Synchronous Code
 
-  // API
+  console.log('Before function')
 
-  // Whenever state changes in Component, the Component will re-render
+  async function getUsers() {
+    console.log('Before await!')
 
-  return (
-    <div>
-      <button
-        onClick={() => {
-          // setUsers()
-        }}
-      >
-        Get Users
-      </button>
-    </div>
-  )
+    const data = await fetch('https://api.github.com/users')
+    // code below await is Asynchronous code
+    console.log('After await!')
+
+    // const response = data
+  }
+
+  getUsers()
+
+  // javascript has one location to run the code (thread -> call stack)
+
+  // Blocking code
+  // for (let i = 0; i < 100000; i++) {
+  //   console.log('for loop is running!')
+  // }
+
+  console.log('After function')
+
+  return <div>App</div>
 }
 
 export default App
