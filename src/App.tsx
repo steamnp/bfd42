@@ -1,10 +1,11 @@
+import { useState } from "react";
 function App() {
-  console.log("Before function");
+  const [users, setUsers] = useState();
 
   async function getUsers() {
     const output = await fetch("https://api.github.com/users");
     const data = await output.json();
-    console.log(data);
+    setUsers(data);
   }
   getUsers();
   return <div>App</div>;
