@@ -1,32 +1,17 @@
 function App() {
   // How to get response from API url?
-  // url: https://api.github.com/users
-
-  // Asynchronous Code
-  // Synchronous Code
-
-  console.log('Before function')
+  // url: 'https://api.github.com/users'
 
   async function getUsers() {
-    console.log('Before await!')
+    const output = await fetch('https://api.github.com/users')
 
-    const data = await fetch('https://api.github.com/users')
-    // code below await is Asynchronous code
-    console.log('After await!')
+    // Convert JSON response to JAVASCRIPT response
+    const data = await output.json()
 
-    // const response = data
+    console.log(data)
   }
 
   getUsers()
-
-  // javascript has one location to run the code (thread -> call stack)
-
-  // Blocking code
-  // for (let i = 0; i < 100000; i++) {
-  //   console.log('for loop is running!')
-  // }
-
-  console.log('After function')
 
   return <div>App</div>
 }
