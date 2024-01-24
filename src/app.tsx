@@ -1,19 +1,25 @@
+import { useEffect, useState } from 'react' // Synchronous code
+
 function App() {
-  // How to get response from API url?
-  // url: 'https://api.github.com/users'
+  // Synchronous code
+  const [users, setUsers] = useState() // Synchronous code
 
   async function getUsers() {
-    const output = await fetch('https://api.github.com/users')
-
-    // Convert JSON response to JAVASCRIPT response
-    const data = await output.json()
-
-    console.log(data)
+    // Synchronous code
+    const output = await fetch('https://api.github.com/users') // Synchronous code
+    const data = await output.json() // Asynchronous code
+    setUsers(data) // Asynchronous code
+    // Line 11 is updating the state
+    // Whenever state updated in App, the App will re-render
   }
 
-  getUsers()
+  useEffect(() => {
+    getUsers() // Synchronous code
+  }, [])
 
-  return <div>App</div>
+  console.log(users)
+
+  return <div>App</div> // Synchronous code
 }
 
-export default App
+export default App // Synchronous code
