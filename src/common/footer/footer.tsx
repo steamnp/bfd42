@@ -1,5 +1,6 @@
-function footer() {
-  return <div>footer</div>;
+import styled from "styled-components";
+function Footer() {
+  return <div>Footer</div>;
 }
 
-export default footer;
+export default Footer;

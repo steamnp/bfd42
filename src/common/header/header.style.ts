@@ -1,8 +1,8 @@
-import styled, { css } from 'styled-components'
-import { Link } from 'react-router-dom'
+import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
 
-import { QUERIES } from '../../helpers/media-query'
-import { IHeaderMenuItemsProps } from '../../types/styles'
+import { QUERIES } from "../../helpers/media-query";
+import { IHeaderMenuItemsProps } from "../../types/styles";
 
 export const HeaderContainer = styled.header`
   max-width: 100%;
@@ -15,7 +15,7 @@ export const HeaderContainer = styled.header`
   @media ${QUERIES.mobile} {
     padding-top: 1rem;
   }
-`
+`;
 
 export const HeaderWrap = styled.div`
   max-width: var(--max-container);
@@ -27,11 +27,11 @@ export const HeaderWrap = styled.div`
   & > * {
     flex: 1;
   }
-`
+`;
 
-export const HeaderLogoWrap = styled.div``
+export const HeaderLogoWrap = styled.div``;
 
-export const HeaderLogoLink = styled(Link)``
+export const HeaderLogoLink = styled(Link)``;
 
 export const HeaderLogo = styled.img`
   max-width: 12.25rem;
@@ -39,11 +39,11 @@ export const HeaderLogo = styled.img`
   @media screen and (max-width: 686px) {
     max-width: 10.25rem;
   }
-`
+`;
 
 export const HeaderMenu = styled.nav`
   flex: 5;
-`
+`;
 
 export const HeaderMobileNav = styled.div`
   display: none;
@@ -52,7 +52,7 @@ export const HeaderMobileNav = styled.div`
     display: flex;
     justify-content: flex-end;
   }
-`
+`;
 
 export const MobileNav = styled.button`
   border: none;
@@ -64,7 +64,7 @@ export const MobileNav = styled.button`
   &:hover {
     background-color: transparent;
   }
-`
+`;
 
 export const HeaderMenuItems = styled.div<IHeaderMenuItemsProps>`
   display: flex;
@@ -95,7 +95,7 @@ export const HeaderMenuItems = styled.div<IHeaderMenuItemsProps>`
         transform: translateY(0rem);
       `}
   }
-`
+`;
 
 export const HeaderMenuItem = styled(Link)`
   text-transform: uppercase;
@@ -112,4 +112,4 @@ export const HeaderMenuItem = styled(Link)`
       border-color: var(--color-pry-300);
     }
   }
-`
+`;

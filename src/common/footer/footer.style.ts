@@ -1,7 +1,5 @@
-function footer.style() {
-  return (
-    <div>footer.style</div>
-  )
+function Footer.style() {
+  return <div>Footer</div>;
 }
 
-export default footer.style
+export default Footer.style;
