@@ -1,45 +1,31 @@
-import { useEffect, useState } from 'react'
-import { getUsers } from '../api/api'
-import styled from 'styled-components'
+import { useEffect, useState } from "react";
+import { getUsers } from "../api/api";
+import styled from "styled-components";
 
-import { IUser } from '../type/api'
-import { Container, Heading, Image, Link } from '../style/style'
+import { IGithubUserName } from "../type/api";
+import { Container, Heading, Image, Link } from "../style/style";
 
 const Error = styled.div`
   color: red;
-`
+`;
 
 function App() {
   // How to type useState hook with typescript
-  const [users, setUsers] = useState<IUser[]>([])
-  const [error, setError] = useState<Error | undefined>(undefined)
+  const [user, setUser] = useState<IGithubUserName>();
+  const [error, setError] = useState<Error | undefined>(undefined);
 
   useEffect(() => {
     // If you are using then method, use catch function to catch the error
     getUsers()
-      .then((data) => setUsers(data))
-      .catch((error) => setError(error))
-  }, [])
+      .then((data) => setUser(data))
+      .catch((error) => setError(error));
+  }, []);
 
   return (
     <div>
-      {error ? (
-        <Error>{error?.message}</Error>
-      ) : (
-        users.map((user) => {
-          return (
-            <Container key={user.id}>
-              <Heading>{user.login.toUpperCase()}</Heading>
-              <Image src={user.avatar_url} alt="" />
-              <Link href={user.html_url} target="_blank">
-                View Profile
-              </Link>
-            </Container>
-          )
-        })
-      )}
+      {error ? <Error>{error?.message}</Error> : <img src={user?.avatar_url} />}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
