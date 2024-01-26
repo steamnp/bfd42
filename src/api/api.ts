@@ -1,10 +1,10 @@
-import { User } from '../type/api'
+import { IUser } from '../type/api'
 
 export async function getUsers() {
   // Use try and catch block to hangle error in async await function
   try {
     const output = await fetch(import.meta.env.VITE_API_URL)
-    const data: User[] = await output.json()
+    const data: IUser[] = await output.json()
 
     return data
   } catch (error) {
