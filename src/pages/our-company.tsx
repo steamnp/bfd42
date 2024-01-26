@@ -1,6 +1,8 @@
+import styled from "styled-components";
+
 function OurCompany() {
   return (
-    <div>
+    <Container>
       Our Company
       <h1>About Us</h1>
       <p>
@@ -10,8 +12,14 @@ function OurCompany() {
         looking forward to creating brands, products, and digital experiences
         that connect with our clients' audiences.
       </p>
-    </div>
+    </Container>
   );
 }
 
+const Container = styled.div`
+  background-color: red;
+  margin: 20px;
+  padding: 20px;
+  color: white;
+`;
 export default OurCompany;
