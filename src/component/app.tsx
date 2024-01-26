@@ -3,7 +3,6 @@ import { getUsers } from "../api/api";
 import styled from "styled-components";
 
 import { IGithubUserName } from "../type/api";
-import { Container, Heading, Image, Link } from "../style/style";
 
 const Error = styled.div`
   color: red;
