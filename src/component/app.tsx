@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { getUsers } from '../api/api'
 import styled from 'styled-components'
 
-import { User } from '../type/api'
+import { IUser } from '../type/api'
 import { Container, Heading, Image, Link } from '../style/style'
 
 const Error = styled.div`
@@ -11,7 +11,7 @@ const Error = styled.div`
 
 function App() {
   // How to type useState hook with typescript
-  const [users, setUsers] = useState<User[]>([])
+  const [users, setUsers] = useState<IUser[]>([])
   const [error, setError] = useState<Error | undefined>(undefined)
 
   useEffect(() => {
