@@ -1,29 +1,43 @@
 import { useEffect, useState } from 'react'
 import { getUsers } from '../api/api'
-import { Container, Heading, Image, Link } from '../style/style'
+import styled from 'styled-components'
+
 import { User } from '../type/api'
+import { Container, Heading, Image, Link } from '../style/style'
+
+const Error = styled.div`
+  color: red;
+`
 
 function App() {
   // How to type useState hook with typescript
   const [users, setUsers] = useState<User[]>([])
+  const [error, setError] = useState<Error | undefined>(undefined)
 
   useEffect(() => {
-    getUsers().then((data) => setUsers(data))
+    // If you are using then method, use catch function to catch the error
+    getUsers()
+      .then((data) => setUsers(data))
+      .catch((error) => setError(error))
   }, [])
 
   return (
     <div>
-      {users.map((user) => {
-        return (
-          <Container key={user.id}>
-            <Heading>{user.login.toUpperCase()}</Heading>
-            <Image src={user.avatar_url} alt="" />
-            <Link href={user.html_url} target="_blank">
-              View Profile
-            </Link>
-          </Container>
-        )
-      })}
+      {error ? (
+        <Error>{error?.message}</Error>
+      ) : (
+        users.map((user) => {
+          return (
+            <Container key={user.id}>
+              <Heading>{user.login.toUpperCase()}</Heading>
+              <Image src={user.avatar_url} alt="" />
+              <Link href={user.html_url} target="_blank">
+                View Profile
+              </Link>
+            </Container>
+          )
+        })
+      )}
     </div>
   )
 }
