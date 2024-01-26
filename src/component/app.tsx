@@ -1,14 +1,11 @@
 import { useEffect, useState } from 'react'
 import { getUsers } from '../api/api'
 import { Container, Heading, Image, Link } from '../style/style'
-
-// Promise
-// Two resolve promises, there are two ways
-// 1. async await (ES8)
-// 2. then method (Es6)
+import { User } from '../type/api'
 
 function App() {
-  const [users, setUsers] = useState([])
+  // How to type useState hook with typescript
+  const [users, setUsers] = useState<User[]>([])
 
   useEffect(() => {
     getUsers().then((data) => setUsers(data))
@@ -32,7 +29,3 @@ function App() {
 }
 
 export default App
-
-// [1,2,3,4,5].map((element,index) => {
-//   return <div>hello</div>
-// })

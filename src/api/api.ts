@@ -1,14 +1,10 @@
-// GET REQUEST (R)
+import { User } from '../type/api'
+
 export async function getUsers() {
-  // ERROR HANDLING
   const output = await fetch(import.meta.env.VITE_API_URL)
-  const data = await output.json()
+
+  // Type the response of API with typescript
+  const data: User[] = await output.json()
 
   return data
 }
-
-// POST REQUEST (C)
-// DELETE REQUEST (D)
-// UPDATE REQUEST (U)
-
-// CRUD operation on api
