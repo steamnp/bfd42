@@ -1,23 +1,13 @@
 function App() {
-  // How to get response from API url?
-  // url: https://api.github.com/users
-
-  // Asynchronous operation
-  // Synchronous code
-
-  console.log("before await");
-
   async function getUsers() {
-    console.log("before await");
-
-    await fetch("https://api.github.com/users");
-    // Code below await is asynchronous code
-    console.log("After await");
+    const output = await fetch("https://api.github.com/users");
+    console.log(output);
   }
 
   getUsers();
 
-  console.log("after function");
+  console.log("It is working");
+
   return <div>App</div>;
 }
 
