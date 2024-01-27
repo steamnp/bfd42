@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { getUsers } from '../api/api'
 
 import { IGithubUserName } from '../type/api'
-import { Container, Error, Heading, Image } from '../style/style'
+import { containerClass } from './style'
 
 function App() {
   const [user, setUser] = useState<IGithubUserName>()
@@ -14,15 +14,17 @@ function App() {
       .catch((error) => setError(error))
   }, [])
 
+  // ?: optional chaining operator
+
   return (
     <div>
       {error ? (
-        <Error>{error?.message}</Error>
+        <div className="text-red-700">{error?.message}</div>
       ) : (
-        <Container>
-          <Image src={user?.avatar_url} />
-          <Heading>{user?.name.toUpperCase()}</Heading>
-        </Container>
+        <div className={containerClass}>
+          <img className="rounded-full" src={user?.avatar_url} />
+          <h2 className="text-blue-700 font-bold">{user?.name?.toUpperCase()}</h2>
+        </div>
       )}
     </div>
   )

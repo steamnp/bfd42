@@ -38,7 +38,8 @@ export interface IGithubUserName {
   received_events_url: string
   type: string
   site_admin: boolean
-  name: string
+  // make name optional property
+  name?: string
   company: string
   blog: string
   location: string
