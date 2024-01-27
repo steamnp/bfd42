@@ -1,30 +1,31 @@
-import { useEffect, useState } from "react";
-import { getUsers } from "../api/api";
-import styled from "styled-components";
+import { useEffect, useState } from 'react'
+import { getUsers } from '../api/api'
 
-import { IGithubUserName } from "../type/api";
-
-const Error = styled.div`
-  color: red;
-`;
+import { IGithubUserName } from '../type/api'
+import { Container, Error, Heading, Image } from '../style/style'
 
 function App() {
-  // How to type useState hook with typescript
-  const [user, setUser] = useState<IGithubUserName>();
-  const [error, setError] = useState<Error | undefined>(undefined);
+  const [user, setUser] = useState<IGithubUserName>()
+  const [error, setError] = useState<Error | undefined>(undefined)
 
   useEffect(() => {
-    // If you are using then method, use catch function to catch the error
     getUsers()
       .then((data) => setUser(data))
-      .catch((error) => setError(error));
-  }, []);
+      .catch((error) => setError(error))
+  }, [])
 
   return (
     <div>
-      {error ? <Error>{error?.message}</Error> : <img src={user?.avatar_url} />}
+      {error ? (
+        <Error>{error?.message}</Error>
+      ) : (
+        <Container>
+          <Image src={user?.avatar_url} />
+          <Heading>{user?.name.toUpperCase()}</Heading>
+        </Container>
+      )}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
