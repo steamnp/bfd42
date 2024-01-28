@@ -8,7 +8,8 @@ import {
   FooterMenuItems,
   FooterMenuItem,
 } from "./footer.style";
-import { MenuData } from "../../types/styles";
+
+import { MenuData } from "../../types/footerStyles";
 
 const Footer = ({ data }: { data: MenuData }) => {
   return (

@@ -1,4 +1,4 @@
-export interface IHeaderMenuItemsProps {
+export interface IFooterMenuItemsProps {
   $navOpen: boolean;
 }
 
@@ -8,14 +8,14 @@ export interface IOverlay {
 }
 
 export interface MenuData {
-  header: {
-    headerLogo: string;
-    headerLogoAlt: string;
-    label: string;
-  };
   footer: {
     footerLogo: string;
     footerLogoAlt: string;
+    label: string;
+  };
+  header: {
+    headerLogo: string;
+    headerLogoAlt: string;
     label: string;
   };
   homeLink: string;
