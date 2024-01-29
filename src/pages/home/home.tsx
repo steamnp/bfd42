@@ -8,8 +8,14 @@ import {
   Paragraph,
   Button,
   MidSection,
+  ImageWebDesign,
+  ImageAppDesign,
+  ImageGraphicDesign,
 } from "./home.style";
 import mobile from "../../assets/images/home/desktop/desktop-hero-image.png";
+import webDesign from "../../assets/images/home/desktop/image-web-design-large.jpg";
+import appDesign from "../../assets/images/home/desktop/image-app-design.jpg";
+import graphicDesign from "../../assets/images/home/desktop/image-graphic-design.jpg";
 function Home() {
   return (
     <Container>
@@ -30,7 +36,9 @@ function Home() {
         </SectionRight>
       </Box>
       <MidSection>
-        Hello
+        <ImageWebDesign src = {webDesign}></ImageWebDesign>
+        <ImageAppDesign src = {appDesign}></ImageAppDesign>
+        <ImageGraphicDesign src = {graphicDesign}></ImageGraphicDesign>
       </MidSection>
 
      

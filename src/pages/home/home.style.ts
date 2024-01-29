@@ -54,7 +54,30 @@ border-radius: 8px;
 
 `
 export const MidSection = styled.section`
+height: 100vh;
 background-color: gray;
 width: 80%;
 margin: auto;
+display: flex;
+flex-direction: column;
+margin-top: 200px;
+
+`
+
+export const ImageWebDesign = styled.img`
+width: 375px;
+border-radius: 5%;
+`
+
+export const ImageAppDesign = styled.img`
+width: 375px;
+height: auto;
+border-radius: 5%;
+
+`
+
+export const ImageGraphicDesign = styled.img`
+width: 375px;
+border-radius: 5%;
+
 `
