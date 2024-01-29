@@ -69,13 +69,19 @@ export default function Footer({ data }: { data: MenuData }) {
       <FooterLowerSection>
         <AddressDiv>
           <AddressDivHeader>Designo Central Office</AddressDivHeader>
-          <AddressPara>3886 Wellingtion Street</AddressPara>
-          <AddressPara>Toronto, Ontario M9C 3j5</AddressPara>
+          <br/>
+          <AddressPara>
+          3886 Wellingtion Street<br/>
+          Toronto, Ontario M9C 3j5
+          </AddressPara>
         </AddressDiv>
         <AddressDiv>
           <AddressDivHeader>Contact Us (Central Office)</AddressDivHeader>
-          <AddressPara>P: +1 253-863-8967</AddressPara>
-          <AddressPara>M: contact@designo.co</AddressPara>
+          <br/>
+          <AddressPara>
+            P: +1 253-863-8967<br/>
+            M: contact@designo.co
+          </AddressPara>
         </AddressDiv>
         <SocialMediaLogo>
           <FacebookLogo />

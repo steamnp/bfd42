@@ -53,3 +53,8 @@ font-size: 12px;
 border-radius: 8px;
 
 `
+export const MidSection = styled.section`
+background-color: gray;
+width: 80%;
+margin: auto;
+`
