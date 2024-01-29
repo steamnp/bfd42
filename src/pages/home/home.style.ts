@@ -20,6 +20,7 @@ background-color: hsl(11, 73%, 66%);
 export const SectionLeft = styled.div`
 width: 60%;
 margin: 25px;
+text-align: left;
 `
 
 export const SectionLeftHeader = styled.h2`
@@ -42,5 +43,13 @@ margin-right: 25px;
 
 export const Image = styled.img`
 
+`
+
+export const Button = styled.a`
+background-color: white;
+margin: 5%;
+padding: 15px;
+font-size: 12px;
+border-radius: 8px;
 
 `
