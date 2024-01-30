@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 
 import { QUERIES } from "../../helpers/media-query";
-import { IFooterMenuItemsProps } from "../../types/styles";
+import { IFooterMenuItemsProps } from "../../types/footerStyles";
 
 export const FooterContainer = styled.footer`
   max-width: 100%;
