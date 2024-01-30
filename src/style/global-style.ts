@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
-import { QUERIES } from '../helpers/media-query'
+import { createGlobalStyle } from "styled-components";
+import { QUERIES } from "../helpers/media-query";
 
 export const GlobalStyles = createGlobalStyle`
     // ROOT VALUES
@@ -97,4 +97,4 @@ export const GlobalStyles = createGlobalStyle`
         line-height: 1.625rem;
         font-weight: var(--font-weight-100);
     }
-`
+`;
