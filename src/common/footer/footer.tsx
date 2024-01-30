@@ -1,5 +1,5 @@
-function Footer() {
-  return <div>Footer</div>;
-}
+import { FooterContainer } from "./footer.style";
 
-export default Footer;
+export default function Footer() {
+  return <FooterContainer>footer</FooterContainer>;
+}
