@@ -38,7 +38,7 @@ export const FooterContainer = styled.footer`
   position: relative;
   z-index: 1000;
   background-color: var(--color-pry-200);
-  margin-top: 1400px;
+  margin-top: 800px;
 
   @media ${QUERIES.mobile} {
     padding-top: 1rem;
