@@ -61,31 +61,36 @@ display: flex;
 flex-direction: row;
 margin-top: 150px;
 
+
+
 `
 export const MidRightBox = styled.div`
 display: flex;
 flex-direction: column;
+margin-left: 16px;
+
 
 `
 export const MidLeftBox = styled.div`
-margin: auto;
+
 `
 export const ImageWebDesign = styled.img`
 width: auto;
 border-radius: 5%;
-margin: auto;
+
+
 `
 
 export const ImageAppDesign = styled.img`
 width: auto;
 height: auto;
 border-radius: 5%;
-margin: auto;
+margin-bottom: 16px;
 
 `
 
 export const ImageGraphicDesign = styled.img`
 width: auto;
 border-radius: 5%;
-margin: auto;
+
 `
