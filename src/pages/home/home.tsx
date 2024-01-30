@@ -11,6 +11,8 @@ import {
   ImageWebDesign,
   ImageAppDesign,
   ImageGraphicDesign,
+  MidLeftBox,
+  MidRightBox,
 } from "./home.style";
 import mobile from "../../assets/images/home/desktop/desktop-hero-image.png";
 import webDesign from "../../assets/images/home/desktop/image-web-design-large.jpg";
@@ -36,9 +38,15 @@ function Home() {
         </SectionRight>
       </Box>
       <MidSection>
+        <MidLeftBox>
         <ImageWebDesign src = {webDesign}></ImageWebDesign>
+        </MidLeftBox>
+        <MidRightBox>
         <ImageAppDesign src = {appDesign}></ImageAppDesign>
         <ImageGraphicDesign src = {graphicDesign}></ImageGraphicDesign>
+
+        </MidRightBox>
+       
       </MidSection>
 
      

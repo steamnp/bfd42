@@ -54,30 +54,38 @@ border-radius: 8px;
 
 `
 export const MidSection = styled.section`
-height: 100vh;
-background-color: gray;
+
 width: 80%;
 margin: auto;
 display: flex;
-flex-direction: column;
+flex-direction: row;
 margin-top: 200px;
 
 `
+export const MidRightBox = styled.div`
+display: flex;
+flex-direction: column;
 
+`
+export const MidLeftBox = styled.div`
+margin: auto;
+`
 export const ImageWebDesign = styled.img`
-width: 375px;
+width: auto;
 border-radius: 5%;
+margin: auto;
 `
 
 export const ImageAppDesign = styled.img`
-width: 375px;
+width: auto;
 height: auto;
 border-radius: 5%;
+margin: auto;
 
 `
 
 export const ImageGraphicDesign = styled.img`
-width: 375px;
+width: auto;
 border-radius: 5%;
-
+margin: auto;
 `
