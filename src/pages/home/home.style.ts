@@ -59,7 +59,7 @@ width: 80%;
 margin: auto;
 display: flex;
 flex-direction: row;
-margin-top: 200px;
+margin-top: 150px;
 
 `
 export const MidRightBox = styled.div`
