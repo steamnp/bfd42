@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.timer {
+  font-size: 2em;
+  margin: 20px;
+}
+
+.buttons button {
+  font-size: 1em;
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
