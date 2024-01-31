@@ -1,31 +1,32 @@
-import { useEffect, useState } from 'react'
-import { getUsers } from '../api/api'
+import { useEffect, useState } from "react";
+import { getUsers } from "../api/api";
 
-import { IGithubUserName } from '../type/api'
-import { Container, Error, Heading, Image } from '../style/style'
+import { IGithubUserName } from "../type/api";
 
 function App() {
-  const [user, setUser] = useState<IGithubUserName>()
-  const [error, setError] = useState<Error | undefined>(undefined)
+  const [user, setUser] = useState<IGithubUserName>();
+  const [error, setError] = useState<Error | undefined>(undefined);
 
   useEffect(() => {
     getUsers()
       .then((data) => setUser(data))
-      .catch((error) => setError(error))
-  }, [])
+      .catch((error) => setError(error));
+  }, []);
 
   return (
     <div>
       {error ? (
-        <Error>{error?.message}</Error>
+        <div>{error?.message}</div>
       ) : (
-        <Container>
-          <Image src={user?.avatar_url} />
-          <Heading>{user?.name.toUpperCase()}</Heading>
-        </Container>
+        <div>
+          <img src={user?.avatar_url} />
+          <h2 className="text-blue-700 font-bold text-2xl">
+            {user?.name.toUpperCase()}
+          </h2>
+        </div>
       )}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
