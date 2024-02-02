@@ -1,6 +1,10 @@
+import { useSelector } from "react-redux";
+
 function App() {
-    const outout = state =>
-  return <div>SAPNA</div> ;
+  const output = useSelector((state) => state);
+  console.log(output);
+
+  return <div>App</div>;
 }
 
 export default App;
