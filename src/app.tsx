@@ -1,5 +1,6 @@
 function App() {
-  return <div>app</div>;
+    const outout = state =>
+  return <div>SAPNA</div> ;
 }
 
 export default App;
