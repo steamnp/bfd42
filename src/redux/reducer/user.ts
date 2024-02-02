@@ -1,17 +1,22 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const userSlice = createSlice({
+export const userSlice = createSlice({
   name: 'user',
-  initialState: 0,
+  initialState: [{ name: 'user 1' }, { name: 'name 2' }],
   reducers: {
-    increment: (state) => state + 1,
-    decrement: (state) => state - 1,
+    // method (function) 1
+    login: () => {},
+
+    // method (function) 2
+    logout: () => {},
+   
+    // method (function) 3
+    // method (function) 4
   },
 })
 
 // We will use action from View (UI or Component)
-export const { increment, decrement } = userSlice.actions
+export const { login, logout } = userSlice.actions
 
 // We need to link below reducer to store
-const userReducer = userSlice.reducer
-export default userReducer
+export default userSlice.reducer
