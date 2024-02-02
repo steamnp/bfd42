@@ -1,10 +1,10 @@
-import { useSelector } from 'react-redux'
+import { useSelector } from "react-redux";
 
 function App() {
-  const output = useSelector((state) => state)
-  console.log(output)
+  const output = useSelector((state) => state);
+  console.log(output);
 
-  return <div>App</div>
+  return <div>App</div>;
 }
 
-export default App
+export default App;
