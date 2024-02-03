@@ -13,11 +13,19 @@ import {
   ImageGraphicDesign,
   MidLeftBox,
   MidRightBox,
+  LowerMidSection,
+  Cards,
+  CardSectionTop,
+  CardSectionBottom,
+  HeaderCard,
 } from "./home.style";
 import mobile from "../../assets/images/home/desktop/desktop-hero-image.png";
 import webDesign from "../../assets/images/home/desktop/image-web-design-large.jpg";
 import appDesign from "../../assets/images/home/desktop/image-app-design.jpg";
 import graphicDesign from "../../assets/images/home/desktop/image-graphic-design.jpg";
+import PassionateImage from "./assetsHome/passionate";
+import ResourcefulImage from "./assetsHome/resourceful";
+import FriendlyImage from "./assetsHome/friendly";
 function Home() {
   return (
     <Container>
@@ -49,7 +57,38 @@ function Home() {
        
       </MidSection>
 
-     
+     <LowerMidSection>
+      <Cards>
+       <CardSectionTop>
+        <PassionateImage/>
+        </CardSectionTop> 
+       <CardSectionBottom>
+       <HeaderCard> </HeaderCard>
+       </CardSectionBottom>
+
+      </Cards>
+
+      <Cards>
+       <CardSectionTop>
+        <ResourcefulImage/>
+        </CardSectionTop> 
+       <CardSectionBottom>
+       <HeaderCard> </HeaderCard>
+       </CardSectionBottom>
+
+      </Cards>
+
+      <Cards>
+       <CardSectionTop>
+        <FriendlyImage/>
+        </CardSectionTop> 
+       <CardSectionBottom>
+        <HeaderCard> </HeaderCard>
+       </CardSectionBottom>
+
+      </Cards>
+      
+     </LowerMidSection>
     </Container>
   );
 }

@@ -94,3 +94,31 @@ width: auto;
 border-radius: 16px;
 
 `
+export const LowerMidSection = styled.section`
+max-width: var(--max-container);
+
+display: flex;
+flex-direction: row;
+max-height: 100vh;
+margin: auto;
+gap: auto;
+
+
+`
+export const Cards = styled.div`
+display: flex;
+flex-direction: column;
+
+`
+
+export const CardSectionTop = styled.div`
+max-width: 20rem;
+`
+
+export const CardSectionBottom = styled.div`
+
+`
+export const HeaderCard = styled.div`
+max-width: 20rem;
+
+`

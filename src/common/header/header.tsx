@@ -1,7 +1,7 @@
 import { HeaderContainer, HeaderWrap, HeaderLogoWrap, HeaderLogoLink, HeaderLogo, HeaderMenu, HeaderMenuItems, HeaderMenuItem, MobileNav, HeaderMobileNav, Hamburger } from './header.style'
 import { MenuData } from '../../types/styles'
 import { useState } from 'react'
-import HamburgerMenu from '../logos/hamburgerMenu';
+import HamburgerMenu from '../social logos/hamburgerMenu';
 
 const Header = ({ data }: { data: MenuData }) => {
   const [openNav, setOpenNav] = useState (false);

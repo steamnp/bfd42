@@ -20,11 +20,11 @@ import {
   SocialMediaLogo,
 } from "./footer.style";
 import { MenuData } from "../../types/styles";
-import FacebookLogo from "../logos/facebook";
-import TwitterLogo from "../logos/twitter";
-import YoutubeLogo from "../logos/youtube";
-import PineterestLogo from "../logos/pineterest";
-import InstgramLogo from "../logos/instagram";
+import FacebookLogo from "../social logos/facebook";
+import TwitterLogo from "../social logos/twitter";
+import YoutubeLogo from "../social logos/youtube";
+import PineterestLogo from "../social logos/pineterest";
+import InstgramLogo from "../social logos/instagram";
 
 export default function Footer({ data }: { data: MenuData }) {
   return (
