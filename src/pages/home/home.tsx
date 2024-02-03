@@ -18,6 +18,7 @@ import {
   CardSectionTop,
   CardSectionBottom,
   HeaderCard,
+  ParagraphCard,
 } from "./home.style";
 import mobile from "../../assets/images/home/desktop/desktop-hero-image.png";
 import webDesign from "../../assets/images/home/desktop/image-web-design-large.jpg";
@@ -47,48 +48,57 @@ function Home() {
       </Box>
       <MidSection>
         <MidLeftBox>
-        <ImageWebDesign src = {webDesign}></ImageWebDesign>
+          <ImageWebDesign src={webDesign}></ImageWebDesign>
         </MidLeftBox>
         <MidRightBox>
-        <ImageAppDesign src = {appDesign}></ImageAppDesign>
-        <ImageGraphicDesign src = {graphicDesign}></ImageGraphicDesign>
-
+          <ImageAppDesign src={appDesign}></ImageAppDesign>
+          <ImageGraphicDesign src={graphicDesign}></ImageGraphicDesign>
         </MidRightBox>
-       
       </MidSection>
 
-     <LowerMidSection>
-      <Cards>
-       <CardSectionTop>
-        <PassionateImage/>
-        </CardSectionTop> 
-       <CardSectionBottom>
-       <HeaderCard> </HeaderCard>
-       </CardSectionBottom>
+      <LowerMidSection>
+        <Cards>
+          <CardSectionTop>
+            <PassionateImage />
+          </CardSectionTop>
+          <CardSectionBottom>
+            <HeaderCard> PASSIONATE </HeaderCard>
+            <ParagraphCard>
+              Each project starts with an in-depth brand research to ensure we
+              only create products that serve a purpose. We merge art, design,
+              and technology into exciting new solutions.
+            </ParagraphCard>
+          </CardSectionBottom>
+        </Cards>
 
-      </Cards>
+        <Cards>
+          <CardSectionTop>
+            <ResourcefulImage />
+          </CardSectionTop>
+          <CardSectionBottom>
+            <HeaderCard>RESOURCEFUL</HeaderCard>
+            <ParagraphCard>
+              Everything that we do has a strategic purpose. We use an agile
+              approach in all of our projects and value customer collaboration.
+              It guarantees superior results that fulfill our clients’ needs.
+            </ParagraphCard>
+          </CardSectionBottom>
+        </Cards>
 
-      <Cards>
-       <CardSectionTop>
-        <ResourcefulImage/>
-        </CardSectionTop> 
-       <CardSectionBottom>
-       <HeaderCard> </HeaderCard>
-       </CardSectionBottom>
-
-      </Cards>
-
-      <Cards>
-       <CardSectionTop>
-        <FriendlyImage/>
-        </CardSectionTop> 
-       <CardSectionBottom>
-        <HeaderCard> </HeaderCard>
-       </CardSectionBottom>
-
-      </Cards>
-      
-     </LowerMidSection>
+        <Cards>
+          <CardSectionTop>
+            <FriendlyImage />
+          </CardSectionTop>
+          <CardSectionBottom>
+            <HeaderCard>FRIENDLY</HeaderCard>
+            <ParagraphCard>
+              We are a group of enthusiastic folks who know how to put people
+              first. Our success depends on our customers, and we strive to give
+              them the best experience a company can provide.
+            </ParagraphCard>
+          </CardSectionBottom>
+        </Cards>
+      </LowerMidSection>
     </Container>
   );
 }

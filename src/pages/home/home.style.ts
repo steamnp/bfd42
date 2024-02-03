@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 export const Container = styled.div`
-max-height: 800px;
+max-height: 100%;
 margin-top: 50px;
 position: relative;
 margin-bottom: 400px;
@@ -98,6 +98,8 @@ border-radius: 16px;
 
 `
 export const LowerMidSection = styled.section`
+height: 25vh;
+
 max-width: var(--max-container);
 display: flex;
 flex-direction: row;
@@ -105,6 +107,8 @@ justify-content: space-evenly;
 align-items: center;
 margin: var(--center-container);
 position: static;
+margin-top: 150px;
+
 
 
 
@@ -112,17 +116,22 @@ position: static;
 export const Cards = styled.div`
 display: flex;
 flex-direction: column;
+max-width: fit-content;
+
 
 `
 
 export const CardSectionTop = styled.div`
-max-width: 20rem;
+
 `
 
 export const CardSectionBottom = styled.div`
 
 `
 export const HeaderCard = styled.div`
-max-width: 20rem;
+
+
+`
+export const ParagraphCard = styled.p`
 
 `

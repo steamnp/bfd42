@@ -5,7 +5,8 @@ import { QUERIES } from '../../helpers/media-query'
 
 export const FooterDisplayBoard = styled.div`
 max-width: var(--max-container);
-min-height: 30vh;
+margin: var(--center-container);
+min-height: 25vh;
 display: flex;
 margin-left: auto;
 margin-right: auto;
