@@ -60,6 +60,7 @@ display: flex;
 flex-direction: row;
 margin-top: 150px;
 max-width: var(--max-container);
+justify-content: space-between;
 
 
 
@@ -67,11 +68,13 @@ max-width: var(--max-container);
 export const MidRightBox = styled.div`
 display: flex;
 flex-direction: column;
-margin-left: 22px;
+justify-content: space-between;
+
 
 
 `
 export const MidLeftBox = styled.div`
+margin-right: 16px;
 
 `
 export const ImageWebDesign = styled.img`
@@ -85,7 +88,7 @@ export const ImageAppDesign = styled.img`
 width: auto;
 height: auto;
 border-radius: 16px;
-margin-bottom: 24px;
+
 
 `
 
