@@ -98,7 +98,7 @@ border-radius: 16px;
 
 `
 export const LowerMidSection = styled.section`
-height: 25vh;
+
 
 max-width: var(--max-container);
 display: flex;
@@ -106,9 +106,9 @@ flex-direction: row;
 justify-content: space-evenly;
 align-items: center;
 margin: var(--center-container);
-position: static;
-margin-top: 150px;
-
+margin-top: 100px;
+margin-bottom: -500px;
+gap: 24px;
 
 
 
@@ -117,19 +117,20 @@ export const Cards = styled.div`
 display: flex;
 flex-direction: column;
 max-width: fit-content;
-
-
+align-items: center;
+text-align: center;
+margin: auto;
 `
 
 export const CardSectionTop = styled.div`
-
+padding: 16px;
 `
 
 export const CardSectionBottom = styled.div`
 
 `
-export const HeaderCard = styled.div`
-
+export const HeaderCard = styled.h3`
+padding: 16px;
 
 `
 export const ParagraphCard = styled.p`
