@@ -1,14 +1,15 @@
-import { useDispatch, useSelector } from 'react-redux'
-import { increment } from './redux/reducer/user'
+import { useAppDispatch, useAppSelector } from './redux/hooks/hooks'
+import { decrement, increment } from './redux/reducer/user'
 
 function App() {
-  const output = useSelector((state) => state)
-  const dispatch = useDispatch()
+  const output = useAppSelector((state) => state)
+  const dispatch = useAppDispatch()
 
   return (
     <>
-      <button onClick={() => dispatch(increment())}>Increment: {output.user}</button>
-      {/* <button>Decrement: {output.user}</button> */}
+      <button onClick={() => dispatch(increment())}>+</button>
+      <button onClick={() => dispatch(decrement())}>-</button>
+      <h1>{output.user}</h1>
     </>
   )
 }

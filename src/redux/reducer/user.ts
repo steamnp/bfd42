@@ -5,7 +5,7 @@ const userSlice = createSlice({
   initialState: 0,
   reducers: {
     increment: (state) => state + 1,
-    decrement: () => {},
+    decrement: (state) => state - 1,
   },
 })
 
