@@ -1,14 +1,5 @@
-import { useState } from "react";
-import Services from "./services";
-
-function App() {
-  const [value, setValue] = useState(0);
-
-  return (
-    <div>
-      <Services value={value} />
-    </div>
-  );
+function app() {
+  return <div>app</div>;
 }
 
-export default App;
+export default app;
