@@ -4,17 +4,17 @@ import { Link } from 'react-router-dom'
 import { QUERIES } from '../../helpers/media-query'
 
 export const FooterDisplayBoard = styled.div`
-max-width: 80vw;
+max-width: var(--max-container);
 min-height: 30vh;
 display: flex;
 margin-left: auto;
 margin-right: auto;
 background-color: var(--color-pry-100);
 z-index: 1;
-margin-top: -280px;
+margin-top: -200px;
 position:relative;
 justify-content: space-between;
-border-radius: 3%;
+border-radius: 16px;
 
 `
 export const FooterDisplayHeader = styled.h1`
@@ -138,10 +138,12 @@ export const HorizontalLine = styled.hr`
 color: white;
 `
 export const FooterLowerSection = styled.div`
+
 display: flex;
 flex-direction: row;
 justify-content: space-evenly;
 padding: 40px;
+margin: var(--center-container);
 `
 
 export const AddressDiv = styled.div`

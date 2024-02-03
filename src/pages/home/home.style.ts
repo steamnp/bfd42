@@ -12,8 +12,8 @@ height: fit-content;
 display: flex;
 flex-direction: row;
 margin: auto;
-border-radius: 2%;
-width: 80%;
+border-radius: 16px;
+max-width: var(--max-container);
 background-color: hsl(11, 73%, 66%);
 
 `
@@ -55,11 +55,11 @@ border-radius: 8px;
 `
 export const MidSection = styled.section`
 
-width: 80%;
 margin: auto;
 display: flex;
 flex-direction: row;
 margin-top: 150px;
+max-width: var(--max-container);
 
 
 
@@ -67,7 +67,7 @@ margin-top: 150px;
 export const MidRightBox = styled.div`
 display: flex;
 flex-direction: column;
-margin-left: 16px;
+margin-left: 22px;
 
 
 `
@@ -76,7 +76,7 @@ export const MidLeftBox = styled.div`
 `
 export const ImageWebDesign = styled.img`
 width: auto;
-border-radius: 5%;
+border-radius: 16px;
 
 
 `
@@ -84,13 +84,13 @@ border-radius: 5%;
 export const ImageAppDesign = styled.img`
 width: auto;
 height: auto;
-border-radius: 5%;
-margin-bottom: 16px;
+border-radius: 16px;
+margin-bottom: 24px;
 
 `
 
 export const ImageGraphicDesign = styled.img`
 width: auto;
-border-radius: 5%;
+border-radius: 16px;
 
 `
