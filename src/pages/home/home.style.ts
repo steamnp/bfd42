@@ -96,12 +96,13 @@ border-radius: 16px;
 `
 export const LowerMidSection = styled.section`
 max-width: var(--max-container);
-
 display: flex;
 flex-direction: row;
-max-height: 100vh;
-margin: auto;
-gap: auto;
+justify-content: space-evenly;
+align-items: center;
+margin: var(--center-container);
+position: static;
+
 
 
 `

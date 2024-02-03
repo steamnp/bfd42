@@ -29,7 +29,8 @@ export const SectionRightDisplyBoard = styled.section`
 
 `
 export const FooterUpperSection = styled.div`
-
+padding-top: 60px;
+padding-bottom: 10px;
 `
 export const FooterContainer = styled.footer`
   max-width: 100%;
@@ -90,7 +91,7 @@ export const MobileNav = styled.button`
     font-size: 1.25rem;
   }
   &:hover {
-    background-color: transparent;
+    /* background-color: transparent; */
   }
 `
 
@@ -110,7 +111,6 @@ export const FooterMenuItems = styled.div`
     align-items: flex-start;
     flex-direction: column;
     min-height: 14.6875rem;
-    transition: 0.5s ease-in-out;
     pointer-events: none;
     opacity: 0;
     transform: translateY(-1rem);
@@ -136,14 +136,19 @@ export const FooterMenuItem = styled(Link)`
 `
 export const HorizontalLine = styled.hr`
 color: white;
+max-width: var(--max-container);
+margin: var(--center-container);
 `
 export const FooterLowerSection = styled.div`
-
+max-width: var(--max-container);
 display: flex;
 flex-direction: row;
-justify-content: space-evenly;
-padding: 40px;
+justify-content: space-between;
+padding-top: 80px;
+padding-bottom: 80px;
 margin: var(--center-container);
+
+
 `
 
 export const AddressDiv = styled.div`
