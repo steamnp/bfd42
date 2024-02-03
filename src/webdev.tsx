@@ -1,5 +1,5 @@
-function Webdev({ anotherValue }: { anotherValue: number }) {
-  return <div>{anotherValue}</div>;
+function Webdev({ value }: { value: number }) {
+  return <div>{value}</div>;
 }
 
 export default Webdev;

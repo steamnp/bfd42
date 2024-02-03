@@ -1,10 +1,9 @@
 import Webdev from "./webdev";
 
-function Services({ newValue }: { newValue: number }) {
+function Services({ value }: { value: number }) {
   return (
     <div>
-      {newValue}
-      <Webdev anotherValue={newValue} />
+      <Webdev value={value} />
     </div>
   );
 }

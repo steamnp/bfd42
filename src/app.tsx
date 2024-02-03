@@ -6,8 +6,7 @@ function App() {
 
   return (
     <div>
-      {value}
-      <Services newValue={value} />
+      <Services value={value} />
     </div>
   );
 }
