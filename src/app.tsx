@@ -1,5 +1,10 @@
+import { useSelector } from "react-redux";
+
 function App() {
-  return <div>App</div>
+  const output = useSelector((state) => state);
+  console.log(output);
+
+  return <div>App</div>;
 }
 
-export default App
+export default App;
