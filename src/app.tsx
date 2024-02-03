@@ -1,15 +1,11 @@
-import { useAppDispatch, useAppSelector } from './redux/hooks/hooks'
-import { decrement, increment } from './redux/reducer/user'
+import CounterDisplay from './components/counter-display'
+import UpdateCounter from './components/update-counter'
 
 function App() {
-  const output = useAppSelector((state) => state)
-  const dispatch = useAppDispatch()
-
   return (
     <>
-      <button onClick={() => dispatch(increment())}>+</button>
-      <button onClick={() => dispatch(decrement())}>-</button>
-      <h1>{output.user}</h1>
+      <UpdateCounter />
+      <CounterDisplay />
     </>
   )
 }
