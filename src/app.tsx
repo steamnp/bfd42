@@ -1,9 +1,9 @@
-import { useDispatch, useSelector } from "react-redux";
 import { increment, decrement } from "./redux/reducer/user";
+import { useAppDispatch, useAppSelector } from "./redux/hooks/hooks";
 
 function App() {
-  const output = useSelector((state) => state);
-  const dispatch = useDispatch();
+  const output = useAppSelector((state) => state);
+  const dispatch = useAppDispatch();
 
   return (
     <>
