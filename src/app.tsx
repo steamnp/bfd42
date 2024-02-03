@@ -1,10 +1,16 @@
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { increment } from './redux/reducer/user'
 
 function App() {
   const output = useSelector((state) => state)
-  console.log(output)
+  const dispatch = useDispatch()
 
-  return <div>App</div>
+  return (
+    <>
+      <button onClick={() => dispatch(increment())}>Increment: {output.user}</button>
+      {/* <button>Decrement: {output.user}</button> */}
+    </>
+  )
 }
 
 export default App
