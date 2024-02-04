@@ -8,7 +8,7 @@ position: relative;
 margin-bottom: 400px;
 `
 export const Box = styled.div`
-height: fit-content;
+height: 500px;
 display: flex;
 flex-direction: row;
 margin: auto;
@@ -18,8 +18,9 @@ background-color: hsl(11, 73%, 66%);
 
 `
 export const SectionLeft = styled.div`
-width: 60%;
-margin: 25px;
+width: auto;
+margin: 100px;
+width: 40%;
 text-align: left;
 `
 
@@ -35,24 +36,18 @@ margin: 5%;
 `
 
 export const SectionRight = styled.div`
-width: 40%;
-margin-top: 25px;
-margin-right: 25px;
+
+
 
 `
 
 export const Image = styled.img`
+height: 500px;
 
+border-top-right-radius: 16px;
+border-bottom-right-radius: 16px;
 `
 
-export const Button = styled.a`
-background-color: white;
-margin: 5%;
-padding: 15px;
-font-size: 12px;
-border-radius: 8px;
-
-`
 export const MidSection = styled.section`
 
 margin: auto;
