@@ -1,5 +1,13 @@
+import { Container } from "./our-company.style"
+
 function OurCompany() {
-  return <div>Our Company</div>
+  return (
+    <Container>
+
+      
+    </Container>
+  )
+
 }
 
 export default OurCompany
