@@ -103,7 +103,8 @@ margin: auto;
 `
 
 export const CardSectionTop = styled.div`
-
+background-color: #F4EEEE;
+border-radius: 50%
 `
 
 export const CardSectionMid = styled.h3`

@@ -123,7 +123,9 @@ margin: auto;
 `
 
 export const CardSectionTop = styled.div`
-padding: 16px;
+
+background-color: #F4EEEE;
+border-radius: 50%
 `
 
 export const CardSectionBottom = styled.div`
