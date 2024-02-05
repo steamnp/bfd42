@@ -1,5 +1,7 @@
-import { Box, Container, Image, Paragraph, SectionLeft, SectionLeftHeader, SectionRight } from "./our-company.style";
+import { Box, Container, Image, Paragraph, SectionLeft, SectionLeftHeader, SectionRight, UpperMidBox, UpperMidLeftSection, UpperMidRightSection } from "./our-company.style";
 import HeroImage from '../../assets/images/about/desktop/image-about-hero.jpg';
+import ImageWorldClassTalent from '../../assets/images/about/desktop/image-world-class-talent.jpg'
+
 
 function OurCompany() {
   return (
@@ -17,6 +19,10 @@ function OurCompany() {
           <Image src = {HeroImage}></Image>
         </SectionRight>
       </Box>
+      <UpperMidBox>
+<UpperMidLeftSection src ={ImageWorldClassTalent}></UpperMidLeftSection>
+<UpperMidRightSection></UpperMidRightSection>
+      </UpperMidBox>
     </Container>
   );
 }

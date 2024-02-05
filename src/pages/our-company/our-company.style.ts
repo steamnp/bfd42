@@ -18,9 +18,9 @@ background-color: hsl(11, 73%, 66%);
 
 `
 export const SectionLeft = styled.div`
-width: auto;
-margin: 100px;
-width: 40%;
+margin-left: 4%;
+margin-top: 100px;
+width: 60%;
 text-align: left;
 `
 
@@ -48,50 +48,35 @@ border-top-right-radius: 16px;
 border-bottom-right-radius: 16px;
 `
 
-export const MidSection = styled.section`
+export const UpperMidBox = styled.section`
 
 margin: auto;
 display: flex;
 flex-direction: row;
 margin-top: 150px;
 max-width: var(--max-container);
-justify-content: space-between;
-
-
 
 `
-export const MidRightBox = styled.div`
+
+export const UpperMidLeftSection = styled.img`
+max-width: auto;
+border-bottom-left-radius: 16px;
+border-top-left-radius: 16px;
+
+`
+
+
+export const UpperMidRightSection = styled.div`
 display: flex;
 flex-direction: column;
-justify-content: space-between;
-
-
-
-`
-export const MidLeftBox = styled.div`
-margin-right: 16px;
-
-`
-export const ImageWebDesign = styled.img`
-width: auto;
-border-radius: 16px;
-
-
+background-color: #FDF2EF;
+height: 640px;
+width: 100%;
+border-top-right-radius: 16px;
+border-bottom-right-radius: 16px;
 `
 
-export const ImageAppDesign = styled.img`
-width: auto;
-height: auto;
-border-radius: 16px;
 
-
-`
-
-export const ImageGraphicDesign = styled.img`
-width: auto;
-border-radius: 16px;
-
-`
 export const LowerMidSection = styled.section`
 
 
