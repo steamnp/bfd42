@@ -48,7 +48,7 @@ border-top-right-radius: 16px;
 border-bottom-right-radius: 16px;
 `
 
-export const UpperMidBox = styled.section`
+export const BoxSecond = styled.section`
 
 margin: auto;
 display: flex;
@@ -58,7 +58,7 @@ max-width: var(--max-container);
 
 `
 
-export const UpperMidLeftSection = styled.img`
+export const BoxSecondLeftSection = styled.img`
 max-width: auto;
 border-bottom-left-radius: 16px;
 border-top-left-radius: 16px;
@@ -66,7 +66,7 @@ border-top-left-radius: 16px;
 `
 
 
-export const UpperMidRightSection = styled.div`
+export const BoxSecondRightSection = styled.div`
 display: flex;
 flex-direction: column;
 background-color: #FDF2EF;
@@ -77,7 +77,7 @@ border-bottom-right-radius: 16px;
 `
 
 
-export const LowerMidSection = styled.section`
+export const BoxThird = styled.section`
 
 
 max-width: var(--max-container);
@@ -103,16 +103,18 @@ margin: auto;
 `
 
 export const CardSectionTop = styled.div`
+
+`
+
+export const CardSectionMid = styled.h3`
+margin-top: 16px;
+`
+export const CardSectionBottom= styled.button`
 padding: 16px;
-`
-
-export const CardSectionBottom = styled.div`
-
-`
-export const HeaderCard = styled.h3`
-padding: 16px;
-
-`
-export const ParagraphCard = styled.p`
-
+background-color: var(--color-pry-100);
+border: none;
+border-radius: 10px;
+color: white;
+font-size: 0.9rem;
+margin-top: 16px;
 `
