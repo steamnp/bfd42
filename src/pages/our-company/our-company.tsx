@@ -14,6 +14,9 @@ import {
   CardSectionTop,
   CardSectionMid,
   CardSectionBottom,
+  BoxBottom,
+  BottomLeftSection,
+  BottomRightSection,
  
 } from "./our-company.style";
 import HeroImage from "../../assets/images/about/desktop/image-about-hero.jpg";
@@ -21,6 +24,7 @@ import ImageWorldClassTalent from "../../assets/images/about/desktop/image-world
 import CanadaImage from "./assetsOur-company/canada";
 import AustraliaImage from "./assetsOur-company/australia";
 import UnitedKingdomImage from "./assetsOur-company/united-kingdom";
+import ImageRealDeal from "../../assets/images/about/desktop/image-real-deal.jpg"
 
 function OurCompany() {
   return (
@@ -69,6 +73,12 @@ function OurCompany() {
           <CardSectionBottom> SEE LOCATION </CardSectionBottom>
         </Cards>
       </BoxThird>
+      <BoxBottom>
+      
+       <BottomLeftSection></BottomLeftSection>
+       <BottomRightSection src = {ImageRealDeal}/>
+       
+      </BoxBottom>
     </Container>
   );
 }

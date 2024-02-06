@@ -87,7 +87,6 @@ justify-content: space-evenly;
 align-items: center;
 margin: var(--center-container);
 margin-top: 100px;
-margin-bottom: -500px;
 gap: 24px;
 
 
@@ -118,4 +117,27 @@ border-radius: 10px;
 color: white;
 font-size: 0.9rem;
 margin-top: 16px;
+`
+
+export const BoxBottom = styled.section`
+margin: auto;
+display: flex;
+flex-direction: row;
+margin-top: 150px;
+max-width: var(--max-container);
+background-color: #FDF2EF;
+border-radius: 16px;
+margin-bottom: -500px;
+
+`
+
+export const BottomLeftSection = styled.div`
+width: 60%;
+`
+
+export const BottomRightSection = styled.img`
+
+border-top-right-radius: 16px;
+border-bottom-right-radius: 16px;
+
 `
