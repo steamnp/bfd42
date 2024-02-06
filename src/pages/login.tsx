@@ -6,7 +6,7 @@ const Login = () => {
       <label htmlFor="username">User Name</label>
       <input type="email" name="username" id="username" required></input>
       <label htmlFor="password">Password</label>
-      <input type="password" id="passord" required></input>
+      <input type="password" id="password" name='password' required></input>
       <button>Login</button>
     </Form>
   );
