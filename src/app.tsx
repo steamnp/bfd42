@@ -1,13 +1,7 @@
-
-
 function App() {
-
-
-  return (
-   <>
-   Hello React
-   </>
-  )
+  return <>
+<form></form>
+  </>;
 }
 
-export default App
+export default App;
