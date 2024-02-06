@@ -4,10 +4,12 @@ const userSlice = createSlice({
   name: "user",
   initialState: [{ name: "user 1" }, { name: "user 2" }],
   reducers: {
-    login: () => {},
-    logout: () => {},
     //method (functoin) 1
+    login: () => {},
+
     //method (functoin) 2
+    logout: () => {},
+
     //method (functoin) 3
     //method (functoin) 4
   },
@@ -17,4 +19,5 @@ const userSlice = createSlice({
 export const { login, logout } = userSlice.actions;
 
 // we need to link reducer to store
-export default userSlice.reducer;
+const userReducer = userSlice.reducer;
+export default userReducer;

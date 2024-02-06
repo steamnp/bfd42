@@ -1,9 +1,15 @@
 import { useSelector } from "react-redux";
+// import { increment } from "./redux/reducer/user";
 
-function app() {
+function App() {
   const output = useSelector((state) => state);
   console.log(output);
-  return <div>app</div>;
+  return (
+    <div>
+      <button>Increment: </button>
+      <button>Decrement: </button>
+    </div>
+  );
 }
 
-export default app;
+export default App;
