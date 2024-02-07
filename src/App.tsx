@@ -1,13 +1,11 @@
-import CounterDisplay from "./components/counter-display";
-import UpdateCounter from "./components/update-counter";
+import Login from "./pages/login";
 
-function App() {
+function app() {
   return (
     <>
-      <UpdateCounter />
-      <CounterDisplay />
+      <Login />
     </>
   );
 }
 
-export default App;
+export default app;
