@@ -4,11 +4,16 @@ import './index.scss';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/home/home.tsx';
+import UpcomingMovie from './pages/upcoming-movies/upcoming-movies.tsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Home />
+  },
+  {
+    path: '/upcoming-movie',
+    element: <UpcomingMovie />
   }
 ]);
 
