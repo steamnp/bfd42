@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
-
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/home/home.tsx';
 import UpcomingMovie from './pages/upcoming-movies/upcoming-movies.tsx';
 import NotFound from './pages/not-found/not-found.tsx';
+import PopTVShowList from './pages/t-v/shows.tsx';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -18,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: '/not-found',
     element: <NotFound />
+  },
+  {
+    path: '/tv-shows',
+    element: <PopTVShowList />
   }
 ]);
 
