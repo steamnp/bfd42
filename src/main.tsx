@@ -5,7 +5,7 @@ import './index.scss';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/home/home.tsx';
 import UpcomingMovie from './pages/upcoming-movies/upcoming-movies.tsx';
-
+import NotFound from './pages/not-found/not-found.tsx';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -14,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: '/upcoming-movie',
     element: <UpcomingMovie />
+  },
+  {
+    path: '/not-found',
+    element: <NotFound />
   }
 ]);
 
