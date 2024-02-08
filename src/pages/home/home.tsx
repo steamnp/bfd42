@@ -19,18 +19,21 @@ const Home = () => {
   //   error: popularMoviesError,
   //   isLoading: popularMoviesLoading
   // } = useFetchPopularMovieDataQuery();
+  // https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3ff8f46655f72f53be83eb889b560470
 
   // const {
   //   data: tvShowData,
   //   error: tvShowError,
   //   isLoading: tvShowLoading
   // } = useFetchTVShowDataQuery();
+  // https://api.themoviedb.org/3/discover/tv?include_adult=false&include_null_first_air_dates=false&language=en-US&page=1&sort_by=popularity.desc&without_genres=string&api_key=3ff8f46655f72f53be83eb889b560470
 
   // const {
   //   data: upcomingMoviesData,
   //   error: upcomingMoviesError,
   //   isLoading: upcomingMoviesLoading
   // } = useFetchUpcomingDataQuery();
+  // https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=2&api_key=3ff8f46655f72f53be83eb889b560470
 
   const popularMoviesData = null;
   const popularMoviesError = null;
