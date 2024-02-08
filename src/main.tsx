@@ -7,6 +7,7 @@ import UpcomingMovie from './pages/upcoming-movies/upcoming-movies.tsx';
 import NotFound from './pages/not-found/not-found.tsx';
 import PopTVShowList from './pages/t-v/shows.tsx';
 import store from './redux/store/store.ts';
+import { Provider } from 'react-redux';
 const router = createBrowserRouter([
   {
     path: '/',
