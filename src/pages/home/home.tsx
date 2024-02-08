@@ -1,5 +1,9 @@
 import { Movie, TVShow, UpcomingMovies, formatYear } from '../../models';
-// import { useFetchPopularMovieDataQuery, useFetchTVShowDataQuery, useFetchUpcomingDataQuery } from '../../store/fetchDataSlice'
+import {
+  useGetMovieDataQuery,
+  useGetTVShowDataQuery,
+  useFetchUpcomingDataQuery
+} from '../../redux/reducer/api';
 import './home.scss';
 
 import { Link, NavLink, useNavigate } from 'react-router-dom';
@@ -14,33 +18,23 @@ import started from '../../assets/wallpaper-trial.jpg';
 import Button from '../../components/button/button';
 
 const Home = () => {
-  // const {
-  //   data: popularMoviesData,
-  //   error: popularMoviesError,
-  //   isLoading: popularMoviesLoading
-  // } = useFetchPopularMovieDataQuery();
+  const {
+    data: popularMoviesData,
+    error: popularMoviesError,
+    isLoading: popularMoviesLoading
+  } = useGetMovieDataQuery();
 
-  // const {
-  //   data: tvShowData,
-  //   error: tvShowError,
-  //   isLoading: tvShowLoading
-  // } = useFetchTVShowDataQuery();
+  const {
+    data: tvShowData,
+    error: tvShowError,
+    isLoading: tvShowLoading
+  } = useGetTVShowDataQuery();
 
   // const {
   //   data: upcomingMoviesData,
   //   error: upcomingMoviesError,
   //   isLoading: upcomingMoviesLoading
-  // } = useFetchUpcomingDataQuery();
-
-  const popularMoviesData = null;
-  const popularMoviesError = null;
-  const popularMoviesLoading = false;
-  const tvShowData = null;
-  const tvShowError = null;
-  const tvShowLoading = false;
-  const upcomingMoviesData = null;
-  const upcomingMoviesError = false;
-  const upcomingMoviesLoading = false;
+  // } = useGetUpcomingDataQuery();
 
   const navigate = useNavigate();
 

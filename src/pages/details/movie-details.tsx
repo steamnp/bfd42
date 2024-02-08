@@ -1,38 +1,38 @@
-import { useEffect, useRef, useState } from "react";
-import { useParams } from "react-router-dom";
-import Button from "../../components/button/button";
-import VideoModal from "../../components/video-modal/video-modal";
+import { useEffect, useRef, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import Button from '../../components/button/button';
+import VideoModal from '../../components/video-modal/video-modal';
 // import {
 //   useFetchMovieByIdQuery,
 //   useFetchVideosQuery,
 // } from "../../store/fetchDataSlice";
 
-import star from "../../assets/star.png";
-import videoPlay from "../../assets/video-play.png";
-import calendar from "../../assets/calendar.png";
-import addIcon from "../../assets/add.png";
-import count from "../../assets/vote-count.png";
-import genre from "../../assets/genre.png";
-import "./Details.scss";
-import { Movie, formatFullDate, formatYear } from "../../models";
+import star from '../../assets/star.png';
+import videoPlay from '../../assets/video-play.png';
+import calendar from '../../assets/calendar.png';
+import addIcon from '../../assets/add.png';
+import count from '../../assets/vote-count.png';
+import genre from '../../assets/genre.png';
+import './Details.scss';
+import { Movie, formatFullDate, formatYear } from '../../models';
 // import {
 //   addToWatchlist,
 //   selectWatchlistTotalItems,
 // } from "../../store/watchlistSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from 'react-redux';
 const MovieDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-//   const watchlistTotalItems = useSelector(selectWatchlistTotalItems);
-const watchlistTotalItems =  25;
-//   const { data: movie } = useFetchMovieByIdQuery(Number(id));
-const movie = id;
+  //   const watchlistTotalItems = useSelector(selectWatchlistTotalItems);
+  const watchlistTotalItems = 25;
+  //   const { data: movie } = useFetchMovieByIdQuery(Number(id));
+  const movie = id;
   const [isVideoVisible, setIsVideoVisible] = useState(false);
   const [isInWatchlist, setIsInWatchlist] = useState(false);
-//   const { data: videoData } = useFetchVideosQuery(movie?.id || 0);
-const videoData = {
+  //   const { data: videoData } = useFetchVideosQuery(movie?.id || 0);
+  const videoData = {
     id: 1
-}
+  };
   const videoModalRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -45,17 +45,17 @@ const videoData = {
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
 
   useEffect(() => {
     const isInWatchlist =
       watchlistTotalItems > 0 && movie
-        ? localStorage.getItem("watchlist")?.includes(movie.id.toString())
+        ? localStorage.getItem('watchlist')?.includes(movie.id.toString())
         : false;
 
     setIsInWatchlist(isInWatchlist!);
@@ -85,7 +85,7 @@ const videoData = {
             {movie && (
               <div className="details__details">
                 <h2 className="details__title">
-                  {movie.title}{" "}
+                  {movie.title}{' '}
                   <span className="details__date">
                     ({formatYear(movie.release_date)})
                   </span>
@@ -102,7 +102,7 @@ const videoData = {
                       movie.genres.map((genre, index) => (
                         <span className="details__genre-item" key={genre.id}>
                           &nbsp; {genre.name}
-                          {index < movie.genres.length - 1 && ", "}
+                          {index < movie.genres.length - 1 && ', '}
                         </span>
                       ))}
                   </div>
@@ -140,8 +140,8 @@ const videoData = {
                     icon={addIcon}
                     children={
                       isInWatchlist
-                        ? "Remove from Watchlist"
-                        : "Add to Watchlist"
+                        ? 'Remove from Watchlist'
+                        : 'Add to Watchlist'
                     }
                   />
                   <Button
