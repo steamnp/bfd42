@@ -28,8 +28,8 @@ import star from '../../assets/star.png';
 import calendar from '../../assets/calendar.png';
 import FilterGenre from '../../components/filter/filter-genre';
 const PopTVShowList = () => {
-  const dispatch = useDispatch();
-  const watchlistItems: WatchlistItem[] = useSelector(selectWatchlistItems);
+  //   const dispatch = useDispatch();
+  //   const watchlistItems: WatchlistItem[] = useSelector(selectWatchlistItems);
 
   const watchlistTotalItems = useSelector(
     (state: { watchlist: { totalItems: number } }) => state.watchlist.totalItems
@@ -44,8 +44,8 @@ const PopTVShowList = () => {
     filteredItems[0] || null
   );
   const [isGrid, setIsGrid] = useState(false);
-  const { data: tvShowData, isLoading, isError } = useFetchTVShowDataQuery();
-  const { data: videoData } = useFetchVideosQuery(selectedItem?.id || 0);
+  //   const { data: tvShowData, isLoading, isError } = useFetchTVShowDataQuery();
+  //   const { data: videoData } = useFetchVideosQuery(selectedItem?.id || 0);
 
   const videoModalRef = useRef<HTMLDivElement | null>(null);
 
