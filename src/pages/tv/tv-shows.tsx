@@ -11,7 +11,7 @@ import {
   formatYear,
   genreIdToName,
 } from "../../models";
-import "./Shows.scss";
+import "./tv-shows.scss";
 import VideoModal from '../../components/video-modal/video-modal';
 // import { useDispatch, useSelector } from "react-redux";
 // import {
