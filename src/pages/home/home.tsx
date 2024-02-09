@@ -3,20 +3,21 @@ import { Movie, TVShow, UpcomingMovies, formatYear } from '../../models';
 import './home.scss';
 
 import { Link, NavLink, useNavigate } from 'react-router-dom';
-import star from '../../assets/star.png';
-import pop from '../../assets/pop.png';
-import video from '../../assets/AMC Theatres. We Make Movies Better..mp4';
-import service from '../../assets/service-banner.jpg';
-import download from '../../assets/download.png';
-import camera from '../../assets/camera.png';
-import screen from '../../assets/screen.png';
-import started from '../../assets/wallpaper-trial.jpg';
-import Button from '../../components/button/button';
+// relative import -> absolute import
+import star from 'src/assets/star.png';
+import pop from 'src/assets/pop.png';
+import video from 'src/assets/AMC Theatres. We Make Movies Better..mp4';
+import service from 'src/assets/service-banner.jpg';
+import download from 'src/assets/download.png';
+import camera from 'src/assets/camera.png';
+import screen from 'src/assets/screen.png';
+import started from 'src/assets/wallpaper-trial.jpg';
+import Button from 'src/components/button/button';
 import {
   useGetPopulaMovieDataQuery,
   useGetTVShowDataQuery,
   useGetUpcomingMoviesDataQuery
-} from '../../redux/reducers/api';
+} from 'src/redux/reducers/api';
 
 const Home = () => {
   const {
