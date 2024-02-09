@@ -18,21 +18,7 @@ import {
   useGetUpcomingMoviesDataQuery
 } from '../../redux/reducers/api';
 
-// RTK Query -> Redux Toolkit Query (RTK Query)
-
 const Home = () => {
-  // Imperative -> x
-  const numbers = [1, 2, 3, 4, 5];
-  for (let i = 0; i < numbers.length; i++) {
-    console.log(i);
-  }
-
-  // declarative
-  numbers.map((item) => console.log(item));
-
-  // Functional Programming
-
-  // declarative
   const {
     data: popularMoviesData,
     isLoading: popularMoviesLoading,
@@ -78,6 +64,7 @@ const Home = () => {
       return text.substring(0, maxLength - 3) + '...';
     }
   };
+
   const renderMovieList = (movies: Movie[], title: string) => {
     const slicedMovies = movies.slice(0, 4);
     return (

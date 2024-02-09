@@ -1,12 +1,18 @@
 export type MovieData = {
   results: Movie[];
+  page: number;
+  total_pages: number;
+  total_results: number;
 };
+
 export type TVShowData = {
   results: TVShow[];
 };
+
 export type UpcomingMoviesData = {
   results: UpcomingMovies[];
 };
+
 export type Movie = {
   id: number;
   overview: string;
@@ -34,6 +40,7 @@ export type TVShow = {
   genre_ids: number[];
   genres: { id: number; name: string }[];
 };
+
 export type UpcomingMovies = {
   adult: boolean;
   backdrop_path: string;
@@ -51,6 +58,7 @@ export type UpcomingMovies = {
   genre_ids: number[];
   genres: { id: number; name: string }[];
 };
+
 export type VideoData = {
   results: Video[];
 };
