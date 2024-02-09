@@ -12,38 +12,44 @@ import camera from '../../assets/camera.png';
 import screen from '../../assets/screen.png';
 import started from '../../assets/wallpaper-trial.jpg';
 import Button from '../../components/button/button';
+import {
+  useGetPopulaMovieDataQuery,
+  useGetTVShowDataQuery,
+  useGetUpcomingMoviesDataQuery
+} from '../../redux/reducers/api';
+
+// RTK Query -> Redux Toolkit Query (RTK Query)
 
 const Home = () => {
-  // const {
-  //   data: popularMoviesData,
-  //   error: popularMoviesError,
-  //   isLoading: popularMoviesLoading
-  // } = useFetchPopularMovieDataQuery();
-  // https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3ff8f46655f72f53be83eb889b560470
+  // Imperative -> x
+  const numbers = [1, 2, 3, 4, 5];
+  for (let i = 0; i < numbers.length; i++) {
+    console.log(i);
+  }
 
-  // const {
-  //   data: tvShowData,
-  //   error: tvShowError,
-  //   isLoading: tvShowLoading
-  // } = useFetchTVShowDataQuery();
-  // https://api.themoviedb.org/3/discover/tv?include_adult=false&include_null_first_air_dates=false&language=en-US&page=1&sort_by=popularity.desc&without_genres=string&api_key=3ff8f46655f72f53be83eb889b560470
+  // declarative
+  numbers.map((item) => console.log(item));
 
-  // const {
-  //   data: upcomingMoviesData,
-  //   error: upcomingMoviesError,
-  //   isLoading: upcomingMoviesLoading
-  // } = useFetchUpcomingDataQuery();
-  // https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=2&api_key=3ff8f46655f72f53be83eb889b560470
+  // Functional Programming
 
-  const popularMoviesData = null;
-  const popularMoviesError = null;
-  const popularMoviesLoading = false;
-  const tvShowData = null;
-  const tvShowError = null;
-  const tvShowLoading = false;
-  const upcomingMoviesData = null;
-  const upcomingMoviesError = false;
-  const upcomingMoviesLoading = false;
+  // declarative
+  const {
+    data: popularMoviesData,
+    isLoading: popularMoviesLoading,
+    isError: popularMoviesError
+  } = useGetPopulaMovieDataQuery();
+
+  const {
+    data: tvShowData,
+    isLoading: tvShowLoading,
+    isError: tvShowError
+  } = useGetTVShowDataQuery();
+
+  const {
+    data: upcomingMoviesData,
+    isLoading: upcomingMoviesLoading,
+    isError: upcomingMoviesError
+  } = useGetUpcomingMoviesDataQuery();
 
   const navigate = useNavigate();
 
