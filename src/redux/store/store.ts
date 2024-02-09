@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { movieDBAPI } from '../reducers';
+import { watchListSlice } from '../reducers/slices/watch-list';
 
 const store = configureStore({
   reducer: {
-    [movieDBAPI.reducerPath]: movieDBAPI.reducer
+    [movieDBAPI.reducerPath]: movieDBAPI.reducer,
+    watchList: watchListSlice.reducer
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(movieDBAPI.middleware)

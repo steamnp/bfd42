@@ -1,6 +1,7 @@
 import { Outlet, createBrowserRouter } from 'react-router-dom';
 import { Header, Footer } from 'src/components';
 import { Home, UpcomingMovie } from 'src/pages';
+// import PopMovieList from 'src/pages/movies/pop-movie-list';
 
 export const router = createBrowserRouter([
   {
@@ -18,9 +19,13 @@ export const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: '/upcoming-movie',
+        path: '/upcoming-movies',
         element: <UpcomingMovie />
       }
+      // {
+      //   path: '/movies',
+      //   element: <PopMovieList />
+      // }
     ]
   }
 ]);

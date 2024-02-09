@@ -1,64 +1,58 @@
 import { useState, useEffect, useRef } from 'react';
-import Slider from '../../components/slider/slider';
-import FilterGenre from '../../components/filter/filter-genre';
-// import {
-//   useFetchUpcomingDataQuery,
-//   useFetchVideosQuery
-// } from '../../store/fetchDataSlice';
+// FIX
+import Slider from '../../components/Slider/Slider';
+// FIX
 import {
-  UpcomingMovies,
-  formatFullDate,
-  formatYear,
-  genreIdToName
-} from '../../models';
-import './upcoming-movie.scss';
-
-// import { useDispatch, useSelector } from 'react-redux';
-// import {
-//   WatchlistItem,
-//   addToWatchlist,
-//   selectWatchlistItems
-// } from '../../store/watchlistSlice';
+  useFetchPopularMovieDataQuery,
+  useFetchVideosQuery
+} from '../../store/fetchDataSlice';
+import { Movie, formatFullDate, formatYear, genreIdToName } from '../../models';
+import './pop-movie-list.scss';
+// FIX
+import Button from '../../components/UI/Button';
+// FIX
+import VideoModal from '../../components/UI/VideoModal';
+import { useDispatch, useSelector } from 'react-redux';
+// FIX
+import {
+  WatchlistItem,
+  addToWatchlist,
+  selectWatchlistItems
+} from '../../store/watchlistSlice';
 import videoPlay from '../../assets/video-play.png';
 import addIcon from '../../assets/add.png';
 import count from '../../assets/vote-count.png';
 import genre from '../../assets/genre.png';
 import star from '../../assets/star.png';
 import calendar from '../../assets/calendar.png';
-import Button from '../../components/button/button';
-import VideoModal from '../../components/video-modal/video-modal';
-import { useGetUpcomingMoviesDataQuery } from 'src/redux';
+// FIX
+import FilterGenre from '../../components/Filter/FilterGenre';
 
-const UpcomingMovie = () => {
+const PopMovieList = () => {
   const {
-    data: upcomingData,
+    data: movieData,
     isLoading,
     isError
-  } = useGetUpcomingMoviesDataQuery();
-  // const dispatch = useDispatch();
-
-  const [windowResize, setWindowResize] = useState<number>(window.innerWidth);
-  const videoModalRef = useRef<HTMLDivElement | null>(null);
+  } = useFetchPopularMovieDataQuery();
+  const dispatch = useDispatch();
   const [isVideoVisible, setIsVideoVisible] = useState(false);
   const [isInWatchlist, setIsInWatchlist] = useState(false);
   const [selectedGenre, setSelectedGenre] = useState<number | null>(null);
-  const [filteredItems, setFilteredItems] = useState<UpcomingMovies[]>([]);
-  const [selectedItem, setSelectedItem] = useState<UpcomingMovies | null>(
+  const [filteredItems, setFilteredItems] = useState<Movie[]>([]);
+  const [selectedItem, setSelectedItem] = useState<Movie | null>(
     filteredItems[0] || null
   );
   const [isGrid, setIsGrid] = useState(false);
+  const [windowResize, setWindowResize] = useState<number>(window.innerWidth);
 
-  // const watchlistItems: WatchlistItem[] = useSelector(selectWatchlistItems);
-  const watchlistItems = [];
+  const { data: videoData } = useFetchVideosQuery(selectedItem?.id || 0);
 
-  // const watchlistTotalItems = useSelector(
-  //   (state: { watchlist: { totalItems: number } }) => state.watchlist.totalItems
-  // );
+  const videoModalRef = useRef<HTMLDivElement | null>(null);
+  const watchlistItems: WatchlistItem[] = useSelector(selectWatchlistItems);
 
-  const watchlistTotalItems = 0;
-
-  // const { data: videoData } = useFetchVideosQuery(selectedItem?.id || 0);
-  const videoData = null;
+  const watchlistTotalItems = useSelector(
+    (state: { watchlist: { totalItems: number } }) => state.watchlist.totalItems
+  );
 
   const handleClickOutside = (event: MouseEvent) => {
     if (
@@ -77,19 +71,6 @@ const UpcomingMovie = () => {
       videoModalRef.current = null;
     };
   }, [videoModalRef]);
-
-  const handleResize = () => {
-    setWindowResize(window.innerWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [windowResize]);
-
   const handleResizeBis = () => {
     const newWindowWidth = window.innerWidth;
 
@@ -104,18 +85,23 @@ const UpcomingMovie = () => {
       window.removeEventListener('resize', handleResizeBis);
     };
   }, [windowResize]);
-
   useEffect(() => {
-    if (upcomingData && upcomingData.results.length > 0) {
-      const filtered = upcomingData.results.filter(
-        (movie: { genre_ids: number[] }) =>
-          !selectedGenre || movie.genre_ids.includes(selectedGenre)
+    if (movieData && movieData.results.length > 0) {
+      const filtered = movieData.results.filter(
+        (movie) => !selectedGenre || movie.genre_ids.includes(selectedGenre)
       );
       setFilteredItems(filtered);
       setSelectedItem(filtered[0] || null);
     }
-  }, [upcomingData, selectedGenre]);
+  }, [movieData, selectedGenre]);
+  useEffect(() => {
+    const isInWatchlist =
+      watchlistTotalItems > 0 && selectedItem
+        ? watchlistItems.some((item) => item.id === selectedItem.id)
+        : false;
 
+    setIsInWatchlist(isInWatchlist);
+  }, [watchlistTotalItems, selectedItem, watchlistItems]);
   const handleSliderSelect = (index: number) => {
     if (index >= 0) {
       setSelectedItem(filteredItems[index] || null);
@@ -126,20 +112,11 @@ const UpcomingMovie = () => {
     }
   };
 
-  useEffect(() => {
-    const isInWatchlist =
-      watchlistTotalItems > 0 && selectedItem
-        ? watchlistItems.some((item) => item.id === selectedItem.id)
-        : false;
-
-    setIsInWatchlist(isInWatchlist);
-  }, [watchlistTotalItems, selectedItem, watchlistItems]);
-
   const handleGenreSelect = (genre: number | null) => {
     setSelectedGenre(genre);
 
     const filtered =
-      upcomingData?.results.filter(
+      movieData?.results.filter(
         (movie: { genre_ids: number[] }) =>
           !genre || movie.genre_ids.includes(genre)
       ) || [];
@@ -150,18 +127,30 @@ const UpcomingMovie = () => {
     setSelectedItem(filtered[selectedIndex >= 0 ? selectedIndex : 0] || null);
   };
 
-  const handleAddToWL = (movie: UpcomingMovies) => {
+  const handleAddToWL = (movie: Movie) => {
     setIsInWatchlist(!isInWatchlist);
-    // dispatch(
-    //   addToWatchlist({
-    //     ...movie
-    //   })
-    // );
+    dispatch(
+      addToWatchlist({
+        ...movie
+      })
+    );
   };
 
+  const handleResize = () => {
+    setWindowResize(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [windowResize]);
   const handleWatchTrailer = () => {
     setIsVideoVisible(!isVideoVisible);
   };
+
   const truncateText = (text: string, maxLength: number): string => {
     if (text.length <= maxLength) {
       return text;
@@ -169,82 +158,83 @@ const UpcomingMovie = () => {
       return text.substring(0, maxLength - 3) + '...';
     }
   };
-  if (isLoading || !upcomingData) {
+
+  if (isLoading || !movieData) {
     return <div>Loading</div>;
   }
 
   if (isError) {
-    return <div>Error fetching upcoming movie data</div>;
+    return <div>Error fetching popular movie data</div>;
   }
 
-  if (!upcomingData.results.length) {
+  if (!movieData.results.length) {
     return <div>No data</div>;
   }
 
   return (
-    <div className="upcoming">
+    <div className="popular">
       {windowResize >= 712 && selectedItem && selectedItem.backdrop_path && (
         <img
-          className="upcoming__background"
+          className="popular__background"
           src={`https://image.tmdb.org/t/p/original${selectedItem.backdrop_path}`}
           alt={selectedItem.title as string}
         />
       )}
-      <div className="upcoming__gen-container">
-        <div className="upcoming__f-d-container">
-          <div className="upcoming__f-d-box">
-            <div className="upcoming__filter">
-              <FilterGenre<UpcomingMovies>
-                items={upcomingData.results}
+      <div className="popular__gen-container">
+        <div className="popular__f-d-container">
+          <div className="popular__f-d-box">
+            <div className="popular__filter">
+              <FilterGenre<Movie>
+                items={movieData.results}
                 onSelectGenre={handleGenreSelect}
               />
             </div>
-            <div className="upcoming__details-container">
+            <div className="popular__details-container">
               {selectedItem && (
-                <div className="upcoming__details">
-                  <h2 className="upcoming__title">
+                <div className="popular__details">
+                  <h2 className="popular__title">
                     {selectedItem.title}{' '}
-                    <span className="upcoming__date">
+                    <span className="popular__date">
                       ({formatYear(selectedItem.release_date)})
                     </span>
                   </h2>
-                  <p className="upcoming__overview">
+                  <p className="popular__overview">
                     {truncateText(selectedItem.overview, 500)}
                   </p>
-                  <div className="upcoming__details-divers">
-                    <div className="upcoming__genres">
+                  <div className="popular__details-divers">
+                    <div className="popular__genres">
                       <img
-                        className="upcoming__icon "
+                        className="popular__icon "
                         src={genre}
                         alt="icon-details"
                       />
                       {selectedItem.genre_ids.map((genreId, index) => (
-                        <span className="upcoming__genre-item" key={genreId}>
+                        <span className="popular__genre-item" key={genreId}>
                           &nbsp; {genreIdToName[genreId]}
                           {index < selectedItem.genre_ids.length - 1 && ', '}
                         </span>
                       ))}
                     </div>
-                    <div className="upcoming__vote-details">
-                      <span className="upcoming__vote">
+                    <div className="popular__vote-details">
+                      <span className="popular__vote">
                         <img
-                          className="upcoming__icon "
+                          className="popular__icon "
                           src={star}
                           alt="icon-details"
                         />
                         {selectedItem.vote_average}
                       </span>
-                      <span className="upcoming__vote">
+                      <span className="popular__vote">
                         <img
-                          className="upcoming__icon "
+                          className="popular__icon "
                           src={count}
                           alt="icon-details"
                         />
                         {selectedItem.vote_count}
                       </span>
-                      <span className="upcoming__vote">
+                      <span className="popular__vote">
                         <img
-                          className="upcoming__icon "
+                          className="popular__icon "
                           src={calendar}
                           alt="icon-details"
                         />
@@ -252,7 +242,7 @@ const UpcomingMovie = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="upcoming__button-container">
+                  <div className="popular__button-container">
                     <Button
                       onClick={() => handleAddToWL(selectedItem)}
                       type="view"
@@ -275,10 +265,10 @@ const UpcomingMovie = () => {
             </div>
           </div>
         </div>
-        <div className="upcoming__slider-container">
+        <div className="popular__slider-container">
           {windowResize < 712 && selectedItem && selectedItem.backdrop_path && (
             <img
-              className="upcoming__background-responsive"
+              className="popular__background-responsive"
               src={`https://image.tmdb.org/t/p/original${selectedItem.backdrop_path}`}
               alt={selectedItem.title as string}
             />
@@ -289,13 +279,13 @@ const UpcomingMovie = () => {
             selectedSlide={selectedItem}
             onSelectItem={handleSliderSelect}
             isGrid={isGrid}>
-            {(movie: UpcomingMovies) => (
-              <div key={movie.id} className="upcoming__movie-item">
+            {(movie: Movie) => (
+              <div key={movie.id} className="popular__movie-item">
                 <img
                   src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
                   alt={movie.title}
-                  className={`upcoming__img ${
-                    selectedItem === movie ? 'upcoming__selected' : ''
+                  className={`popular__img ${
+                    selectedItem === movie ? 'popular__selected' : ''
                   }`}
                   onClick={() => setSelectedItem(movie)}
                   loading="lazy"
@@ -313,13 +303,13 @@ const UpcomingMovie = () => {
           />
         </div>
       )}
-      <div className="upcoming__title-overlay">
+      <div className="popular__title-overlay">
         {selectedItem && (
-          <h2 className="upcoming__selected-title">{selectedItem.title}</h2>
+          <h2 className="popular__selected-title">{selectedItem.title}</h2>
         )}
       </div>
     </div>
   );
 };
 
-export default UpcomingMovie;
+export default PopMovieList;
