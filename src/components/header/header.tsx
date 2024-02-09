@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import { NavLink } from 'react-router-dom';
 import watchLogo from '../../assets/watchlist-logo.svg';
-import './header.module.scss';
+import './header.scss';
 import logo from '../../assets/eye-logo.png';
 // import { selectWatchlistTotalItems } from "../../store/watchlistSlice";
 

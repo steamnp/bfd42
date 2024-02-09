@@ -6,3 +6,8 @@ export { default as download } from './download.png';
 export { default as camera } from './camera.png';
 export { default as screen } from './screen.png';
 export { default as started } from './wallpaper-trial.jpg';
+export { default as instagram } from './instagram.png';
+export { default as twitter } from './twitter.png';
+export { default as linkedin } from './linkedin.png';
+export { default as github } from './github.png';
+export { default as logo } from './eye-logo.png';

@@ -1,5 +1,5 @@
-import { movieDBAPI } from './../reducers/api';
 import { configureStore } from '@reduxjs/toolkit';
+import { movieDBAPI } from '../reducers';
 
 const store = configureStore({
   reducer: {
