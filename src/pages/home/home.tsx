@@ -1,9 +1,9 @@
 import { Movie, TVShow, UpcomingMovies, formatYear } from '../../models';
 import {
   useGetMovieDataQuery,
-  useGetTVShowDataQuery,
-  useFetchUpcomingDataQuery
-} from '../../redux/reducer/api';
+  useGetTvShowDataQuery,
+  useGetUpComingDataQuery
+} from '../../redux/reducer/api.ts';
 import './home.scss';
 
 import { Link, NavLink, useNavigate } from 'react-router-dom';
@@ -28,13 +28,13 @@ const Home = () => {
     data: tvShowData,
     error: tvShowError,
     isLoading: tvShowLoading
-  } = useGetTVShowDataQuery();
+  } = useGetTvShowDataQuery();
 
-  // const {
-  //   data: upcomingMoviesData,
-  //   error: upcomingMoviesError,
-  //   isLoading: upcomingMoviesLoading
-  // } = useGetUpcomingDataQuery();
+  const {
+    data: upcomingMoviesData,
+    error: upcomingMoviesError,
+    isLoading: upcomingMoviesLoading
+  } = useGetUpComingDataQuery();
 
   const navigate = useNavigate();
 
