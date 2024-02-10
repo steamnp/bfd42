@@ -96,6 +96,8 @@ export enum MovieGenre {
   Western = 37
 }
 
+export type WatchListItem = Movie | TVShow | UpcomingMovies;
+
 export enum TVShowGenre {
   ActionAdventure = 10759,
   Animation = 16,

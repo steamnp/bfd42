@@ -47,7 +47,7 @@ const Home = () => {
         path = `/movies/details/${itemId}`;
         break;
       case 'upcomingMovie':
-        path = `/upcoming-movies/details/${itemId}`;
+        path = `/details/${itemId}`;
         break;
       case 'tvShow':
         path = `/tvshows/details/${itemId}`;
@@ -157,7 +157,7 @@ const Home = () => {
                 handleMovieClick(upcomingMovie.id, 'upcomingMovie')
               }>
               <NavLink
-                to={`/upcoming-movies/details/${upcomingMovie.id}`}
+                to={`/details/${upcomingMovie.id}`}
                 className="movie-link">
                 <img
                   src={`https://image.tmdb.org/t/p/w500${upcomingMovie.poster_path}`}
